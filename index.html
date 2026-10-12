@@ -235,20 +235,51 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label><i class="fa-solid fa-list"></i> Escolha o Serviço</label>
-                            <select id="order-service" onchange="calculatePrice()">
-                                <option value="1000" data-price="0.015">Seguidores Mundiais (Reposição 30d) - R$ 15,00 / 1k</option>
-                                <option value="1000" data-price="0.035">Seguidores Brasileiros Reais - R$ 35,00 / 1k</option>
-                                <option value="1000" data-price="0.008">Curtidas Instantâneas - R$ 8,00 / 1k</option>
-                                <option value="1000" data-price="0.005">Visualizações em Vídeos/Reels - R$ 5,00 / 1k</option>
-                            </select>
-                        </div>
+                        <!-- NOVO MENU SUSPENSO CUSTOMIZADO (ESTILO PAINEL SMM) -->
+<div class="form-group">
+    <label><i class="fa-solid fa-list-check"></i> Categoria / Serviço</label>
+    
+    <div class="custom-dropdown" id="custom-dropdown">
+        <!-- Caixa principal que fica visível -->
+        <div class="dropdown-select-box" onclick="toggleDropdown()">
+            <div class="dropdown-selected-value" id="selected-service-text">
+                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Seguidores Brasileiros - Emergencial 🚨
+            </div>
+            <i class="fa-solid fa-chevron-down dropdown-arrow" id="dropdown-arrow"></i>
+        </div>
 
-                        <div class="form-group">
-                            <label><i class="fa-solid fa-link"></i> Link do Perfil ou Publicação</label>
-                            <input type="text" id="order-link" placeholder="https://www.instagram.com/seuusuario" required>
-                        </div>
+        <!-- Lista de Opções (Dropdown que abre e fecha) -->
+        <div class="dropdown-options-list" id="dropdown-options">
+            <div class="dropdown-option active" data-price="0.035" onclick="selectDropdownOption(this, 'instagram', 'Instagram | Seguidores Brasileiros - Emergencial 🚨')">
+                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Seguidores Brasileiros - Emergencial 🚨
+            </div>
+            <div class="dropdown-option" data-price="0.015" onclick="selectDropdownOption(this, 'instagram', 'Instagram | Seguidores Mundiais EMERGENCIAL 🚨')">
+                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Seguidores Mundiais EMERGENCIAL 🚨
+            </div>
+            <div class="dropdown-option" data-price="0.008" onclick="selectDropdownOption(this, 'instagram', 'Instagram | Curtidas Brasileiras')">
+                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Curtidas Brasileiras
+            </div>
+            <div class="dropdown-option" data-price="0.005" onclick="selectDropdownOption(this, 'instagram', 'Instagram | Curtidas Mundiais')">
+                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Curtidas Mundiais
+            </div>
+            <div class="dropdown-option" data-price="0.020" onclick="selectDropdownOption(this, 'instagram', 'Instagram | Comentários Brasileiros')">
+                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Comentários Brasileiros
+            </div>
+            <div class="dropdown-option" data-price="0.004" onclick="selectDropdownOption(this, 'instagram', 'Instagram | Visualizações em Reels')">
+                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Visualizações em Reels
+            </div>
+            <div class="dropdown-option" data-price="0.018" onclick="selectDropdownOption(this, 'tiktok', 'TikTok - Seguidores Brasileiros')">
+                <i class="fa-brands fa-tiktok icon-app-pulse"></i> TikTok - Seguidores Brasileiros
+            </div>
+            <div class="dropdown-option" data-price="0.012" onclick="selectDropdownOption(this, 'tiktok', 'TikTok | Seguidores Mundiais')">
+                <i class="fa-brands fa-tiktok icon-app-pulse"></i> TikTok | Seguidores Mundiais
+            </div>
+        </div>
+    </div>
+
+    <!-- Input oculto para o preço -->
+    <input type="hidden" id="selected-service-price" value="0.035">
+</div>
 
                         <div class="form-group">
                             <label><i class="fa-solid fa-calculator"></i> Quantidade</label>
