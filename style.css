@@ -48,19 +48,6 @@ body {
     gap: 15px;
 }
 
-.logo-icon {
-    width: 48px;
-    height: 48px;
-    background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: #fff;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
-}
-
 .logo-text h1 {
     font-size: 22px;
     font-weight: 800;
@@ -257,25 +244,6 @@ body {
     position: relative;
 }
 
-.wolf-card-glow {
-    width: 140px;
-    height: 140px;
-    background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
-    border-radius: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 64px;
-    color: #fff;
-    box-shadow: 0 0 50px rgba(0, 212, 255, 0.5);
-    animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
 /* PLATFORMS GRID */
 .section-title {
     font-size: 22px;
@@ -359,19 +327,30 @@ body {
     color: var(--text-muted);
 }
 
-/* ORDER FORM */
+/* ORDER FORM & CORREÇÃO DO LAYOUT CORRIGIDO */
 .order-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.6fr 1fr;
     gap: 30px;
+    align-items: start;
 }
 
-.order-form-card, .order-summary-card {
+.order-form-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 30px;
     backdrop-filter: blur(10px);
+}
+
+.order-summary-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 100px;
 }
 
 .form-group {
@@ -391,7 +370,7 @@ body {
     margin-right: 5px;
 }
 
-.form-group select, .form-group input {
+.form-group input {
     width: 100%;
     background: rgba(11, 15, 29, 0.8);
     border: 1px solid var(--border-color);
@@ -403,7 +382,7 @@ body {
     transition: var(--transition);
 }
 
-.form-group select:focus, .form-group input:focus {
+.form-group input:focus {
     border-color: var(--neon-blue);
     box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
 }
@@ -447,7 +426,7 @@ body {
     color: var(--success);
 }
 
-/* SERVICES TABLE */
+/* SERVICES TABLE & LEGAL & BLOG */
 .table-container {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -508,7 +487,6 @@ body {
     color: #070913;
 }
 
-/* SUPPORT & LEGAL & BLOG */
 .support-grid, .blog-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -745,18 +723,7 @@ body {
     border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
-/* RESPONSIVO */
-@media(max-width: 900px) {
-    .sidebar { width: 75px; }
-    .sidebar .menu-item span, .sidebar-footer { display: none; }
-    .main-content { margin-left: 75px; padding: 20px; }
-    .hero-banner { flex-direction: column; text-align: center; gap: 30px; }
-    .hero-text p { margin: 0 auto 30px; }
-    .order-grid { grid-template-columns: 1fr; }
-}
-
 /* --- LOGO DO LOBO & ANIMAÇÕES HOVER --- */
-
 .logo-icon.wolf-logo {
     width: 48px;
     height: 48px;
@@ -773,7 +740,6 @@ body {
     overflow: hidden;
 }
 
-/* Tamanho do SVG dentro da logo */
 .wolf-svg {
     width: 28px;
     height: 28px;
@@ -781,7 +747,6 @@ body {
     filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
 }
 
-/* Efeito ao passar o mouse na logo (Hover) */
 .logo-icon.wolf-logo:hover {
     transform: scale(1.12) rotate(-3deg);
     box-shadow: 0 0 25px rgba(0, 212, 255, 0.8), 0 0 40px rgba(138, 43, 226, 0.6);
@@ -794,7 +759,6 @@ body {
     animation: wolfPulse 1s infinite alternate ease-in-out;
 }
 
-/* Animação suave da logo do banner gigante */
 .wolf-card-glow {
     width: 150px;
     height: 150px;
@@ -830,33 +794,12 @@ body {
     transform: scale(1.1);
 }
 
-/* Keyframes do pulso de luz do Lobo */
 @keyframes wolfPulse {
-    0% {
-        transform: scale(1.12);
-    }
-    100% {
-        transform: scale(1.22);
-    }
+    0% { transform: scale(1.12); }
+    100% { transform: scale(1.22); }
 }
-/* --- CORES OFICIAIS DOS ÍCONES DAS PLATAFORMAS --- */
-.ig-color { color: #e1306c !important; text-shadow: 0 0 10px rgba(225, 48, 108, 0.5); }
-.tk-color { color: #25f4ee !important; text-shadow: 0 0 10px rgba(37, 244, 238, 0.5); }
-.kw-color { color: #ff5722 !important; text-shadow: 0 0 10px rgba(255, 87, 34, 0.5); }
-.yt-color { color: #ff0000 !important; text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
-.fb-color { color: #1877f2 !important; text-shadow: 0 0 10px rgba(24, 119, 242, 0.5); }
 
-/* Correção para o ícone quando a opção estiver selecionada com fundo azul neon */
-.dropdown-option.active .ig-color,
-.dropdown-option.active .tk-color,
-.dropdown-option.active .kw-color,
-.dropdown-option.active .yt-color,
-.dropdown-option.active .fb-color {
-    color: #070913 !important;
-    text-shadow: none;
-}
-/* --- MENU SUSPENSO ESTILO PAINEL SMM COM ANIMAÇÃO --- */
-
+/* --- MENU SUSPENSO CUSTOMIZADO (SMM STYLE) --- */
 .custom-dropdown {
     position: relative;
     width: 100%;
@@ -898,7 +841,6 @@ body {
     transform: rotate(180deg);
 }
 
-/* Lista de Opções (Escondida por padrão com animação suave) */
 .dropdown-options-list {
     position: absolute;
     top: calc(100% + 8px);
@@ -950,30 +892,45 @@ body {
     box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
 }
 
-.dropdown-option.active .icon-app-pulse {
-    color: #070913;
-}
-
-/* Animação de Abrir e Fechar dos Ícones das Plataformas */
+/* ANIMAÇÃO DE PULSAÇÃO DOS ÍCONES */
 @keyframes appPulseAnim {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.25);
-    }
-    100% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
 }
 
 .icon-app-pulse {
     font-size: 16px;
-    color: var(--neon-blue);
     display: inline-block;
     animation: appPulseAnim 2s infinite ease-in-out;
 }
 
 .dropdown-option:hover .icon-app-pulse {
     animation: appPulseAnim 0.8s infinite ease-in-out;
+}
+
+/* CORES OFICIAIS DOS APLICATIVOS */
+.ig-color { color: #e1306c !important; text-shadow: 0 0 10px rgba(225, 48, 108, 0.5); }
+.tk-color { color: #25f4ee !important; text-shadow: 0 0 10px rgba(37, 244, 238, 0.5); }
+.kw-color { color: #ff5722 !important; text-shadow: 0 0 10px rgba(255, 87, 34, 0.5); }
+.yt-color { color: #ff0000 !important; text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
+.fb-color { color: #1877f2 !important; text-shadow: 0 0 10px rgba(24, 119, 242, 0.5); }
+
+.dropdown-option.active .ig-color,
+.dropdown-option.active .tk-color,
+.dropdown-option.active .kw-color,
+.dropdown-option.active .yt-color,
+.dropdown-option.active .fb-color {
+    color: #070913 !important;
+    text-shadow: none;
+}
+
+/* RESPONSIVO */
+@media(max-width: 900px) {
+    .sidebar { width: 75px; }
+    .sidebar .menu-item span, .sidebar-footer { display: none; }
+    .main-content { margin-left: 75px; padding: 20px; }
+    .hero-banner { flex-direction: column; text-align: center; gap: 30px; }
+    .hero-text p { margin: 0 auto 30px; }
+    .order-grid { grid-template-columns: 1fr; }
 }
