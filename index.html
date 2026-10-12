@@ -140,12 +140,87 @@
                 </div>
             </section>
 
-            <!-- 2. SEÇÃO NOVO PEDIDO -->
-            <section id="section-novo-pedido" class="content-section">
-                <div class="section-header-box">
-                    <h2><i class="fa-solid fa-cart-plus text-neon"></i> Novo Pedido (Sem Cadastro)</h2>
-                    <p>Preencha os dados abaixo, escolha a quantidade e finalize o pagamento instantaneamente.</p>
+            <!-- NOVA ESTRUTURA MODERNA DE ESCOLHA DE SERVIÇOS -->
+<div class="form-group">
+    <label class="section-subtitle"><i class="fa-solid fa-list-check"></i> Escolha o Serviço Desejado</label>
+    
+    <div class="custom-services-grid" id="custom-services-grid">
+        <!-- Serviço 1 (Disponível) -->
+        <div class="service-card active" data-price="0.015" onclick="selectCustomService(this)">
+            <div class="service-header">
+                <div class="service-platform instagram">
+                    <i class="fa-brands fa-instagram"></i>
                 </div>
+                <span class="status-pill online"><i class="fa-solid fa-circle"></i> Online</span>
+            </div>
+            <div class="service-info">
+                <h4>Seguidores Mundiais (Reposição 30d)</h4>
+                <p>Entrega instantânea • Alta retenção</p>
+            </div>
+            <div class="service-footer">
+                <span class="service-price">R$ 15,00 <small>/ 1k</small></span>
+                <span class="radio-indicator"><i class="fa-solid fa-check"></i></span>
+            </div>
+        </div>
+
+        <!-- Serviço 2 (Disponível) -->
+        <div class="service-card" data-price="0.035" onclick="selectCustomService(this)">
+            <div class="service-header">
+                <div class="service-platform instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <span class="status-pill online"><i class="fa-solid fa-circle"></i> Online</span>
+            </div>
+            <div class="service-info">
+                <h4>Seguidores Brasileiros Reais 🇧🇷</h4>
+                <p>Contas 100% brasileiras e ativas</p>
+            </div>
+            <div class="service-footer">
+                <span class="service-price">R$ 35,00 <small>/ 1k</small></span>
+                <span class="radio-indicator"><i class="fa-solid fa-check"></i></span>
+            </div>
+        </div>
+
+        <!-- Serviço 3 (Disponível) -->
+        <div class="service-card" data-price="0.008" onclick="selectCustomService(this)">
+            <div class="service-header">
+                <div class="service-platform instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </div>
+                <span class="status-pill online"><i class="fa-solid fa-circle"></i> Online</span>
+            </div>
+            <div class="service-info">
+                <h4>Curtidas Instantâneas</h4>
+                <p>Início imediato em até 2 minutos</p>
+            </div>
+            <div class="service-footer">
+                <span class="service-price">R$ 8,00 <small>/ 1k</small></span>
+                <span class="radio-indicator"><i class="fa-solid fa-check"></i></span>
+            </div>
+        </div>
+
+        <!-- Serviço 4 (Fora do Ar / Manutenção) -->
+        <div class="service-card disabled">
+            <div class="service-header">
+                <div class="service-platform tiktok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+                <span class="status-pill offline"><i class="fa-solid fa-triangle-exclamation"></i> Manutenção</span>
+            </div>
+            <div class="service-info">
+                <h4>TikTok Views & Live Stream</h4>
+                <p>Servidor em atualização técnica</p>
+            </div>
+            <div class="service-footer">
+                <span class="service-price text-muted">Indisponível</span>
+                <span class="radio-indicator lock"><i class="fa-solid fa-lock"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Campo oculto para guardar o preço do serviço selecionado -->
+    <input type="hidden" id="selected-service-price" value="0.015">
+</div>
 
                 <div class="order-grid">
                     <div class="order-form-card">
