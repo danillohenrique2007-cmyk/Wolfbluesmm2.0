@@ -222,18 +222,39 @@
     <input type="hidden" id="selected-service-price" value="0.015">
 </div>
 
-                <div class="order-grid">
-                    <div class="order-form-card">
-                        <div class="form-group">
-                            <label><i class="fa-solid fa-layer-group"></i> Selecione a Plataforma</label>
-                            <select id="order-platform" onchange="updateServicesList()">
-                                <option value="instagram">Instagram</option>
-                                <option value="tiktok">TikTok</option>
-                                <option value="kwai">Kwai</option>
-                                <option value="youtube">YouTube</option>
-                                <option value="facebook">Facebook</option>
-                            </select>
-                        </div>
+                <!-- NOVO MENU SUSPENSO CUSTOMIZADO DE PLATAFORMAS -->
+<div class="form-group">
+    <label><i class="fa-solid fa-layer-group"></i> Selecione a Plataforma</label>
+    
+    <div class="custom-dropdown" id="platform-dropdown">
+        <!-- Caixa principal que fica visível -->
+        <div class="dropdown-select-box" onclick="togglePlatformDropdown()">
+            <div class="dropdown-selected-value" id="selected-platform-text">
+                <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i> Instagram
+            </div>
+            <i class="fa-solid fa-chevron-down dropdown-arrow" id="platform-dropdown-arrow"></i>
+        </div>
+
+        <!-- Lista de Opções das Plataformas -->
+        <div class="dropdown-options-list" id="platform-dropdown-options">
+            <div class="dropdown-option active" data-platform="instagram" onclick="selectPlatformOption(this, 'Instagram', 'fa-brands fa-instagram', 'ig-color')">
+                <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i> Instagram
+            </div>
+            <div class="dropdown-option" data-platform="tiktok" onclick="selectPlatformOption(this, 'TikTok', 'fa-brands fa-tiktok', 'tk-color')">
+                <i class="fa-brands fa-tiktok icon-app-pulse tk-color"></i> TikTok
+            </div>
+            <div class="dropdown-option" data-platform="kwai" onclick="selectPlatformOption(this, 'Kwai', 'fa-solid fa-bolt', 'kw-color')">
+                <i class="fa-solid fa-bolt icon-app-pulse kw-color"></i> Kwai
+            </div>
+            <div class="dropdown-option" data-platform="youtube" onclick="selectPlatformOption(this, 'YouTube', 'fa-brands fa-youtube', 'yt-color')">
+                <i class="fa-brands fa-youtube icon-app-pulse yt-color"></i> YouTube
+            </div>
+            <div class="dropdown-option" data-platform="facebook" onclick="selectPlatformOption(this, 'Facebook', 'fa-brands fa-facebook', 'fb-color')">
+                <i class="fa-brands fa-facebook icon-app-pulse fb-color"></i> Facebook
+            </div>
+        </div>
+    </div>
+</div>
 
                         <!-- NOVO MENU SUSPENSO CUSTOMIZADO (ESTILO PAINEL SMM) -->
 <div class="form-group">
