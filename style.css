@@ -754,3 +754,88 @@ body {
     .hero-text p { margin: 0 auto 30px; }
     .order-grid { grid-template-columns: 1fr; }
 }
+
+/* --- LOGO DO LOBO & ANIMAÇÕES HOVER --- */
+
+.logo-icon.wolf-logo {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #00d4ff, #8a2be2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tamanho do SVG dentro da logo */
+.wolf-svg {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.8));
+}
+
+/* Efeito ao passar o mouse na logo (Hover) */
+.logo-icon.wolf-logo:hover {
+    transform: scale(1.12) rotate(-3deg);
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.8), 0 0 40px rgba(138, 43, 226, 0.6);
+    background: linear-gradient(135deg, #00f0ff, #a100ff);
+}
+
+.logo-icon.wolf-logo:hover .wolf-svg {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px #ffffff);
+    animation: wolfPulse 1s infinite alternate ease-in-out;
+}
+
+/* Animação suave da logo do banner gigante */
+.wolf-card-glow {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(138, 43, 226, 0.3));
+    border: 2px solid rgba(0, 212, 255, 0.5);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.wolf-svg-hero {
+    width: 85px;
+    height: 85px;
+    color: #00d4ff;
+    filter: drop-shadow(0 0 12px #00d4ff);
+    transition: all 0.5s ease;
+}
+
+.wolf-card-glow:hover {
+    transform: translateY(-8px) scale(1.05);
+    border-color: #00d4ff;
+    box-shadow: 0 0 50px rgba(0, 212, 255, 0.7), 0 0 80px rgba(138, 43, 226, 0.5);
+}
+
+.wolf-card-glow:hover .wolf-svg-hero {
+    color: #fff;
+    filter: drop-shadow(0 0 20px #00d4ff);
+    transform: scale(1.1);
+}
+
+/* Keyframes do pulso de luz do Lobo */
+@keyframes wolfPulse {
+    0% {
+        transform: scale(1.12);
+    }
+    100% {
+        transform: scale(1.22);
+    }
+}
