@@ -159,3 +159,34 @@ window.addEventListener('click', function(e) {
         dropdown.classList.remove('open');
     }
 });
+
+// Abrir e fechar o menu dropdown de plataformas
+function togglePlatformDropdown() {
+    const dropdown = document.getElementById('platform-dropdown');
+    dropdown.classList.toggle('open');
+}
+
+// Selecionar uma plataforma na lista customizada
+function selectPlatformOption(element, platformName, iconClass, colorClass) {
+    // Monta o HTML com o ícone colorido e pulse
+    const fullIconHTML = `<i class="${iconClass} icon-app-pulse ${colorClass}"></i> ${platformName}`;
+    document.getElementById('selected-platform-text').innerHTML = fullIconHTML;
+
+    // Atualiza classes ativas
+    document.querySelectorAll('#platform-dropdown-options .dropdown-option').forEach(opt => opt.classList.remove('active'));
+    element.classList.add('active');
+
+    // Fecha o dropdown de plataformas
+    document.getElementById('platform-dropdown').classList.remove('open');
+
+    // Sincroniza com a função global do site se necessário
+    selectPlatformAndOrder(platformName);
+}
+
+// Fechar o dropdown de plataformas ao clicar fora dele na tela
+window.addEventListener('click', function(e) {
+    const platformDropdown = document.getElementById('platform-dropdown');
+    if (platformDropdown && !platformDropdown.contains(e.target)) {
+        platformDropdown.classList.remove('open');
+    }
+});
