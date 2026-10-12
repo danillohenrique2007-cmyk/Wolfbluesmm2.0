@@ -359,6 +359,12 @@ body {
     color: var(--text-muted);
 }
 
+/* ORDER FORM */
+.order-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
 /* --- CORREÇÃO DO LAYOUT DE NOVO PEDIDO --- */
 .order-grid {
     display: grid;
@@ -382,6 +388,7 @@ body {
     width: 100%;
     margin-top: 20px;
 }
+
 
 .form-group {
     margin-bottom: 20px;
