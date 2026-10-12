@@ -1105,3 +1105,20 @@ body {
 .dropdown-option:hover .icon-app-pulse {
     animation: appPulseAnim 0.8s infinite ease-in-out;
 }
+
+/* --- CORES OFICIAIS DOS ÍCONES DAS PLATAFORMAS --- */
+.ig-color { color: #e1306c !important; text-shadow: 0 0 10px rgba(225, 48, 108, 0.5); }
+.tk-color { color: #25f4ee !important; text-shadow: 0 0 10px rgba(37, 244, 238, 0.5); }
+.kw-color { color: #ff5722 !important; text-shadow: 0 0 10px rgba(255, 87, 34, 0.5); }
+.yt-color { color: #ff0000 !important; text-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
+.fb-color { color: #1877f2 !important; text-shadow: 0 0 10px rgba(24, 119, 242, 0.5); }
+
+/* Correção para o ícone quando a opção estiver selecionada com fundo azul neon */
+.dropdown-option.active .ig-color,
+.dropdown-option.active .tk-color,
+.dropdown-option.active .kw-color,
+.dropdown-option.active .yt-color,
+.dropdown-option.active .fb-color {
+    color: #070913 !important;
+    text-shadow: none;
+}
