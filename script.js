@@ -125,3 +125,37 @@ function calculatePrice() {
     document.getElementById('sum-qty').innerText = qty.toLocaleString('pt-BR');
     document.getElementById('sum-total').innerText = 'R$ ' + total;
 }
+
+// Abrir e fechar o menu dropdown customizado
+function toggleDropdown() {
+    const dropdown = document.getElementById('custom-dropdown');
+    dropdown.classList.toggle('open');
+}
+
+// Selecionar um item do dropdown
+function selectDropdownOption(element, platform, text) {
+    // Atualiza o texto exibido na caixa principal
+    document.getElementById('selected-service-text').innerHTML = element.innerHTML;
+
+    // Atualiza classes ativas
+    document.querySelectorAll('.dropdown-option').forEach(opt => opt.classList.remove('active'));
+    element.classList.add('active');
+
+    // Atualiza o preço correspondente
+    const price = element.getAttribute('data-price');
+    document.getElementById('selected-service-price').value = price;
+
+    // Fecha o dropdown
+    document.getElementById('custom-dropdown').classList.remove('open');
+
+    // Recalcula o valor total
+    calculatePrice();
+}
+
+// Fechar o dropdown se clicar fora dele na tela
+window.addEventListener('click', function(e) {
+    const dropdown = document.getElementById('custom-dropdown');
+    if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('open');
+    }
+});
