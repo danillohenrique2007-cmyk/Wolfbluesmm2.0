@@ -95,3 +95,33 @@ function copyPix() {
 window.onload = function() {
     calculatePrice();
 };
+
+// Selecionar serviço nos cards visuais
+function selectCustomService(element) {
+    if (element.classList.contains('disabled')) return;
+
+    // Remove destaque dos outros cards
+    document.querySelectorAll('.service-card').forEach(card => card.classList.remove('active'));
+
+    // Destaca o card clicado
+    element.classList.add('active');
+
+    // Atualiza o valor oculto e calcula o preço final
+    const price = element.getAttribute('data-price');
+    document.getElementById('selected-service-price').value = price;
+    
+    // Atualiza o cálculo
+    calculatePrice();
+}
+
+// Atualização da função de calcular preço
+function calculatePrice() {
+    const quantityInput = document.getElementById('order-quantity');
+    const selectedPrice = parseFloat(document.getElementById('selected-service-price').value) || 0.015;
+    const qty = parseInt(quantityInput.value) || 0;
+
+    const total = (qty * selectedPrice).toFixed(2).replace('.', ',');
+
+    document.getElementById('sum-qty').innerText = qty.toLocaleString('pt-BR');
+    document.getElementById('sum-total').innerText = 'R$ ' + total;
+}
