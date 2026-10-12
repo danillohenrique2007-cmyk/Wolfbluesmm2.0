@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolfbluesmm2.0 - Painel SMM Profissional</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Arquivo CSS separado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOPBAR / HEADER -->
+    <header class="topbar">
+        <div class="logo-area">
+            <div class="logo-icon">
+                <i class="fa-solid fa-wolf-pack-battalion"></i>
+            </div>
+            <div class="logo-text">
+                <h1>Wolfblue<span>smm2.0</span></h1>
+                <p>Painel de Crescimento Digital</p>
+            </div>
+        </div>
+        <div class="topbar-actions">
+            <span class="badge-status"><i class="fa-solid fa-circle text-success"></i> Servidores Online</span>
+            <button class="btn-fast-order" onclick="switchSection('novo-pedido')">
+                <i class="fa-solid fa-bolt"></i> Novo Pedido Rápido
+            </button>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <!-- BARRA LATERAL (SIDEBAR ESQUERDA) -->
+        <aside class="sidebar">
+            <nav class="sidebar-menu">
+                <a href="#" class="menu-item active" data-target="home" onclick="switchSection('home')">
+                    <div class="icon-box"><i class="fa-solid fa-house"></i></div>
+                    <span>Início</span>
+                </a>
+                <a href="#" class="menu-item" data-target="novo-pedido" onclick="switchSection('novo-pedido')">
+                    <div class="icon-box"><i class="fa-solid fa-cart-plus"></i></div>
+                    <span>Novo Pedido</span>
+                </a>
+                <a href="#" class="menu-item" data-target="servicos" onclick="switchSection('servicos')">
+                    <div class="icon-box"><i class="fa-solid fa-list-check"></i></div>
+                    <span>Serviços</span>
+                </a>
+                <a href="#" class="menu-item" data-target="suporte" onclick="switchSection('suporte')">
+                    <div class="icon-box"><i class="fa-solid fa-headset"></i></div>
+                    <span>Suporte</span>
+                </a>
+                <a href="#" class="menu-item" data-target="termos" onclick="switchSection('termos')">
+                    <div class="icon-box"><i class="fa-solid fa-file-contract"></i></div>
+                    <span>Termos de Uso</span>
+                </a>
+                <a href="#" class="menu-item" data-target="privacidade" onclick="switchSection('privacidade')">
+                    <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                    <span>Política de Privacidade</span>
+                </a>
+                <a href="#" class="menu-item" data-target="blog" onclick="switchSection('blog')">
+                    <div class="icon-box"><i class="fa-solid fa-blog"></i></div>
+                    <span>Blog</span>
+                </a>
+                <a href="#" class="menu-item" data-target="baixar-app" onclick="switchSection('baixar-app')">
+                    <div class="icon-box"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <span>Baixe o App</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>&copy; 2026 Wolfbluesmm2.0</p>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL DINÂMICO -->
+        <main class="main-content">
+
+            <!-- 1. SEÇÃO INICIAL / LOJA PRINCIPAL -->
+            <section id="section-home" class="content-section active">
+                <div class="hero-banner">
+                    <div class="hero-text">
+                        <h2>Domine as Redes Sociais com a <span class="neon-text">Wolfbluesmm2.0</span></h2>
+                        <p>Impulsione seu Instagram, TikTok, Kwai, YouTube e Facebook com entrega instantânea e máxima segurança. Sem necessidade de cadastro!</p>
+                        <button class="btn-primary" onclick="switchSection('novo-pedido')">
+                            <i class="fa-solid fa-rocket"></i> Fazer Pedido Agora
+                        </button>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="wolf-card-glow">
+                            <i class="fa-solid fa-wolf-pack-battalion"></i>
+                            <div class="pulse-ring"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="section-title"><i class="fa-solid fa-fire text-neon"></i> Plataformas em Destaque</h3>
+                <div class="platforms-grid">
+                    <div class="platform-card" onclick="selectPlatformAndOrder('Instagram')">
+                        <div class="p-icon instagram"><i class="fa-brands fa-instagram"></i></div>
+                        <h4>Instagram</h4>
+                        <p>Seguidores, Curtidas, Visualizações e Reels</p>
+                        <span class="p-link">Ver Serviços <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                    <div class="platform-card" onclick="selectPlatformAndOrder('TikTok')">
+                        <div class="p-icon tiktok"><i class="fa-brands fa-tiktok"></i></div>
+                        <h4>TikTok</h4>
+                        <p>Seguidores, Likes, Views e Compartilhamentos</p>
+                        <span class="p-link">Ver Serviços <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                    <div class="platform-card" onclick="selectPlatformAndOrder('Kwai')">
+                        <div class="p-icon kwai"><i class="fa-solid fa-bolt"></i></div>
+                        <h4>Kwai</h4>
+                        <p>Seguidores, Curtidas e Visualizações em alta</p>
+                        <span class="p-link">Ver Serviços <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                    <div class="platform-card" onclick="selectPlatformAndOrder('YouTube')">
+                        <div class="p-icon youtube"><i class="fa-brands fa-youtube"></i></div>
+                        <h4>YouTube</h4>
+                        <p>Inscritos, Visualizações e Horas de Watchtime</p>
+                        <span class="p-link">Ver Serviços <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                    <div class="platform-card" onclick="selectPlatformAndOrder('Facebook')">
+                        <div class="p-icon facebook"><i class="fa-brands fa-facebook"></i></div>
+                        <h4>Facebook</h4>
+                        <p>Curtidas em Páginas, Seguidores e Views</p>
+                        <span class="p-link">Ver Serviços <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. SEÇÃO NOVO PEDIDO -->
+            <section id="section-novo-pedido" class="content-section">
+                <div class="section-header-box">
+                    <h2><i class="fa-solid fa-cart-plus text-neon"></i> Novo Pedido (Sem Cadastro)</h2>
+                    <p>Preencha os dados abaixo, escolha a quantidade e finalize o pagamento instantaneamente.</p>
+                </div>
+
+                <div class="order-grid">
+                    <div class="order-form-card">
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-layer-group"></i> Selecione a Plataforma</label>
+                            <select id="order-platform" onchange="updateServicesList()">
+                                <option value="instagram">Instagram</option>
+                                <option value="tiktok">TikTok</option>
+                                <option value="kwai">Kwai</option>
+                                <option value="youtube">YouTube</option>
+                                <option value="facebook">Facebook</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-list"></i> Escolha o Serviço</label>
+                            <select id="order-service" onchange="calculatePrice()">
+                                <option value="1000" data-price="0.015">Seguidores Mundiais (Reposição 30d) - R$ 15,00 / 1k</option>
+                                <option value="1000" data-price="0.035">Seguidores Brasileiros Reais - R$ 35,00 / 1k</option>
+                                <option value="1000" data-price="0.008">Curtidas Instantâneas - R$ 8,00 / 1k</option>
+                                <option value="1000" data-price="0.005">Visualizações em Vídeos/Reels - R$ 5,00 / 1k</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-link"></i> Link do Perfil ou Publicação</label>
+                            <input type="text" id="order-link" placeholder="https://www.instagram.com/seuusuario" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-calculator"></i> Quantidade</label>
+                            <input type="number" id="order-quantity" value="1000" min="100" step="100" oninput="calculatePrice()">
+                        </div>
+
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-envelope"></i> Seu E-mail (Para receber comprovante e suporte)</label>
+                            <input type="email" id="order-email" placeholder="seuemail@exemplo.com" required>
+                        </div>
+                    </div>
+
+                    <!-- RESUMO E PAGAMENTO -->
+                    <div class="order-summary-card">
+                        <h3>Resumo do Pedido</h3>
+                        <div class="summary-row">
+                            <span>Plataforma:</span>
+                            <strong id="sum-platform">Instagram</strong>
+                        </div>
+                        <div class="summary-row">
+                            <span>Quantidade:</span>
+                            <strong id="sum-qty">1.000</strong>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total a Pagar:</span>
+                            <strong id="sum-total" class="neon-text">R$ 15,00</strong>
+                        </div>
+
+                        <button class="btn-primary full-width" onclick="checkoutModal()">
+                            <i class="fa-solid fa-lock"></i> Ir para o Pagamento Seguro
+                        </button>
+                        <p class="secure-notice"><i class="fa-solid fa-shield-check"></i> Pagamento processado via PIX ou Cartão com segurança SSL.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. SEÇÃO SERVIÇOS -->
+            <section id="section-servicos" class="content-section">
+                <div class="section-header-box">
+                    <h2><i class="fa-solid fa-list-check text-neon"></i> Lista de Serviços & Preços</h2>
+                    <p>Confira nossa tabela completa de serviços ativos com os melhores preços do mercado.</p>
+                </div>
+                <div class="table-container">
+                    <table class="services-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Serviço</th>
+                                <th>Preço por 1.000</th>
+                                <th>Mín / Máx</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#101</td>
+                                <td><span class="badge instagram">Instagram</span> Seguidores Mundiais 🚀</td>
+                                <td>R$ 15,00</td>
+                                <td>100 / 50.000</td>
+                                <td><button class="btn-table" onclick="quickBuy(101)">Comprar</button></td>
+                            </tr>
+                            <tr>
+                                <td>#102</td>
+                                <td><span class="badge instagram">Instagram</span> Seguidores Brasileiros 🇧🇷</td>
+                                <td>R$ 35,00</td>
+                                <td>100 / 20.000</td>
+                                <td><button class="btn-table" onclick="quickBuy(102)">Comprar</button></td>
+                            </tr>
+                            <tr>
+                                <td>#201</td>
+                                <td><span class="badge tiktok">TikTok</span> Seguidores Rápidos 🎵</td>
+                                <td>R$ 18,00</td>
+                                <td>100 / 30.000</td>
+                                <td><button class="btn-table" onclick="quickBuy(201)">Comprar</button></td>
+                            </tr>
+                            <tr>
+                                <td>#301</td>
+                                <td><span class="badge kwai">Kwai</span> Seguidores Ativos 🔥</td>
+                                <td>R$ 20,00</td>
+                                <td>100 / 25.000</td>
+                                <td><button class="btn-table" onclick="quickBuy(301)">Comprar</button></td>
+                            </tr>
+                            <tr>
+                                <td>#401</td>
+                                <td><span class="badge youtube">YouTube</span> Inscritos com Retenção 📺</td>
+                                <td>R$ 45,00</td>
+                                <td>50 / 10.000</td>
+                                <td><button class="btn-table" onclick="quickBuy(401)">Comprar</button></td>
+                            </tr>
+                            <tr>
+                                <td>#501</td>
+                                <td><span class="badge facebook">Facebook</span> Curtidas na Página 👍</td>
+                                <td>R$ 22,00</td>
+                                <td>100 / 15.000</td>
+                                <td><button class="btn-table" onclick="quickBuy(501)">Comprar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 4. SEÇÃO SUPORTE -->
+            <section id="section-suporte" class="content-section">
+                <div class="section-header-box">
+                    <h2><i class="fa-solid fa-headset text-neon"></i> Central de Suporte 24/7</h2>
+                    <p>Precisa de ajuda com seu pedido? Nossa equipe de atendimento está pronta para te atender.</p>
+                </div>
+                <div class="support-grid">
+                    <div class="support-card">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <h3>Atendimento via WhatsApp</h3>
+                        <p>Resposta rápida em até 5 minutos com atendentes reais.</p>
+                        <a href="https://wa.me/" target="_blank" class="btn-primary">Chamar no WhatsApp</a>
+                    </div>
+                    <div class="support-card">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                        <h3>Suporte por E-mail</h3>
+                        <p>Envie sua dúvida para suporte@wolfbluesmm.com</p>
+                        <a href="mailto:suporte@wolfbluesmm.com" class="btn-outline">Enviar E-mail</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. TERMOS DE USO -->
+            <section id="section-termos" class="content-section">
+                <div class="section-header-box">
+                    <h2><i class="fa-solid fa-file-contract text-neon"></i> Termos de Uso</h2>
+                    <p>Última atualização: Outubro de 2026</p>
+                </div>
+                <div class="legal-content">
+                    <h3>1. Aceitação dos Termos</h3>
+                    <p>Ao utilizar os serviços da Wolfbluesmm2.0, você concorda com os termos descritos nesta página. Nossos serviços são destinados a impulsionar a visibilidade nas redes sociais de forma rápida e segura.</p>
+                    <h3>2. Entrega e Garantia</h3>
+                    <p>As entregas começam automaticamente após a confirmação do pagamento. Em caso de quedas superiores à garantia do serviço contratado, oferecemos reposição automática dentro do prazo estipulado.</p>
+                    <h3>3. Perfis Públicos</h3>
+                    <p>O perfil ou link informado no momento da compra deve estar configurado como **PÚBLICO**. Não nos responsabilizamos por pedidos feitos em contas privadas.</p>
+                </div>
+            </section>
+
+            <!-- 6. POLÍTICA DE PRIVACIDADE -->
+            <section id="section-privacidade" class="content-section">
+                <div class="section-header-box">
+                    <h2><i class="fa-solid fa-shield-halved text-neon"></i> Política de Privacidade</h2>
+                    <p>Sua privacidade é nossa prioridade máxima.</p>
+                </div>
+                <div class="legal-content">
+                    <h3>Proteção de Dados</h3>
+                    <p>Não exigimos senha de acesso às suas redes sociais. Solicitamos apenas o link público do seu perfil ou publicação e um e-mail válido para contato e acompanhamento.</p>
+                    <h3>Segurança de Pagamento</h3>
+                    <p>Todas as transações financeiras são criptografadas e processadas por gateways de pagamento seguros, garantindo que seus dados bancários ou chaves PIX jamais sejam armazenados em nossos servidores.</p>
+                </div>
+            </section>
+
+            <!-- 7. BLOG -->
+            <section id="section-blog" class="content-section">
+                <div class="section-header-box">
+                    <h2><i class="fa-solid fa-blog text-neon"></i> Blog & Dicas de Crescimento</h2>
+                    <p>Aprenda estratégias para viralizar no Instagram, TikTok, Kwai e muito mais.</p>
+                </div>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-img"><i class="fa-solid fa-chart-line"></i></div>
+                        <div class="blog-body">
+                            <span class="blog-date">10 Out, 2026</span>
+                            <h3>Como o Algoritmo do Instagram Entrega seus Reels em 2026</h3>
+                            <p>Descubra os principais fatores de engajamento que fazem seu vídeo atingir a aba Explorar.</p>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-img"><i class="fa-solid fa-video"></i></div>
+                        <div class="blog-body">
+                            <span class="blog-date">05 Out, 2026</span>
+                            <h3>Estratégias Práticas para Crescer no TikTok do Zero</h3>
+                            <p>Dicas valiosas para reter a atenção do usuário nos primeiros 3 segundos de vídeo.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. BAIXE O APP -->
+            <section id="section-baixar-app" class="content-section">
+                <div class="hero-banner app-banner">
+                    <div class="hero-text">
+                        <h2>Baixe o Aplicativo <span class="neon-text">Wolfbluesmm2.0</span></h2>
+                        <p>Tenha o painel SMM na palma da sua mão. Faça pedidos mais rápido, acompanhe relatórios e receba notificações push em tempo real.</p>
+                        <div class="app-buttons">
+                            <button class="btn-store" onclick="alert('Download do APK iniciado!')"><i class="fa-brands fa-android"></i> Baixar para Android (APK)</button>
+                            <button class="btn-store" onclick="alert('Versão iOS disponível em breve na App Store!')"><i class="fa-brands fa-apple"></i> App Store (Em breve)</button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="phone-mockup">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- MODAL DE CHECKOUT / PAGAMENTO PIX -->
+    <div id="checkout-modal" class="modal-overlay">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-qrcode text-neon"></i> Pagamento Instantâneo via PIX</h3>
+                <button class="close-modal" onclick="closeCheckout()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p>Escaneie o QR Code abaixo com o aplicativo do seu banco para concluir o pedido:</p>
+                <div class="qrcode-box">
+                    <i class="fa-solid fa-qrcode qr-icon-mock"></i>
+                </div>
+                <div class="pix-copy-box">
+                    <input type="text" value="00020126580014br.gov.bcb.pix... wolfbluesmm2.0" id="pix-code" readonly>
+                    <button class="btn-copy" onclick="copyPix()"><i class="fa-solid fa-copy"></i> Copiar</button>
+                </div>
+                <div class="modal-alert">
+                    <i class="fa-solid fa-circle-notch fa-spin"></i> Aguardando confirmação do pagamento... (O serviço inicia automaticamente após o PIX).
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Arquivo JS separado -->
+    <script src="script.js"></script>
+</body>
+</html>
