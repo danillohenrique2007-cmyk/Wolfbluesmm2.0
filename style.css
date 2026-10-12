@@ -359,19 +359,28 @@ body {
     color: var(--text-muted);
 }
 
-/* ORDER FORM */
+/* --- CORREÇÃO DO LAYOUT DE NOVO PEDIDO --- */
 .order-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.6fr 1fr; /* Proporção perfeita para o formulário e o resumo */
     gap: 30px;
+    align-items: start; /* Impede que os elementos estiquem verticalmente à toa */
 }
 
-.order-form-card, .order-summary-card {
+.order-summary-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 30px;
     backdrop-filter: blur(10px);
+    position: sticky;
+    top: 100px; /* Mantém o resumo fixo e visível ao rolar a página */
+}
+
+/* Garante que o botão de pagamento não estique além do card */
+.order-summary-card .full-width {
+    width: 100%;
+    margin-top: 20px;
 }
 
 .form-group {
