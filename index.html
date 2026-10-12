@@ -15,20 +15,19 @@
     <!-- TOPBAR / HEADER -->
     <header class="topbar">
         <div class="logo-area">
-    <div class="logo-icon wolf-logo">
-        <svg class="wolf-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Cabeça e detalhes do lobo neon -->
-            <path d="M12 3L8 7L3 5L5 11L2 14L8 16L12 21L16 16L22 14L19 11L21 5L16 7L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M9 10L10.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M15 10L13.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M12 15L12 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-    </div>
-    <div class="logo-text">
-        <h1>Wolfblue<span>smm2.0</span></h1>
-        <p>Painel de Crescimento Digital</p>
-    </div>
-</div>
+            <div class="logo-icon wolf-logo">
+                <svg class="wolf-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 3L8 7L3 5L5 11L2 14L8 16L12 21L16 16L22 14L19 11L21 5L16 7L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 10L10.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M15 10L13.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M12 15L12 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="logo-text">
+                <h1>Wolfblue<span>smm2.0</span></h1>
+                <p>Painel de Crescimento Digital</p>
+            </div>
+        </div>
         <div class="topbar-actions">
             <span class="badge-status"><i class="fa-solid fa-circle text-success"></i> Servidores Online</span>
             <button class="btn-fast-order" onclick="switchSection('novo-pedido')">
@@ -92,17 +91,16 @@
                             <i class="fa-solid fa-rocket"></i> Fazer Pedido Agora
                         </button>
                     </div>
-                   <div class="hero-visual">
-    <div class="wolf-card-glow wolf-logo">
-        <svg class="wolf-svg-hero" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3L8 7L3 5L5 11L2 14L8 16L12 21L16 16L22 14L19 11L21 5L16 7L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M9 10L10.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M15 10L13.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M12 15L12 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        <div class="pulse-ring"></div>
-    </div>
-</div>
+                    <div class="hero-visual">
+                        <div class="wolf-card-glow wolf-logo">
+                            <svg class="wolf-svg-hero" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 3L8 7L3 5L5 11L2 14L8 16L12 21L16 16L22 14L19 11L21 5L16 7L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 10L10.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M15 10L13.5 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                <path d="M12 15L12 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
                 <h3 class="section-title"><i class="fa-solid fa-fire text-neon"></i> Plataformas em Destaque</h3>
@@ -140,167 +138,89 @@
                 </div>
             </section>
 
-            <!-- NOVA ESTRUTURA MODERNA DE ESCOLHA DE SERVIÇOS -->
-<div class="form-group">
-    <label class="section-subtitle"><i class="fa-solid fa-list-check"></i> Escolha o Serviço Desejado</label>
-    
-    <div class="custom-services-grid" id="custom-services-grid">
-        <!-- Serviço 1 (Disponível) -->
-        <div class="service-card active" data-price="0.015" onclick="selectCustomService(this)">
-            <div class="service-header">
-                <div class="service-platform instagram">
-                    <i class="fa-brands fa-instagram"></i>
+            <!-- 2. SEÇÃO NOVO PEDIDO -->
+            <section id="section-novo-pedido" class="content-section">
+                <div class="section-header-box">
+                    <h2><i class="fa-solid fa-cart-plus text-neon"></i> Novo Pedido (Sem Cadastro)</h2>
+                    <p>Preencha os dados abaixo, escolha a quantidade e finalize o pagamento instantaneamente.</p>
                 </div>
-                <span class="status-pill online"><i class="fa-solid fa-circle"></i> Online</span>
-            </div>
-            <div class="service-info">
-                <h4>Seguidores Mundiais (Reposição 30d)</h4>
-                <p>Entrega instantânea • Alta retenção</p>
-            </div>
-            <div class="service-footer">
-                <span class="service-price">R$ 15,00 <small>/ 1k</small></span>
-                <span class="radio-indicator"><i class="fa-solid fa-check"></i></span>
-            </div>
-        </div>
 
-        <!-- Serviço 2 (Disponível) -->
-        <div class="service-card" data-price="0.035" onclick="selectCustomService(this)">
-            <div class="service-header">
-                <div class="service-platform instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
-                <span class="status-pill online"><i class="fa-solid fa-circle"></i> Online</span>
-            </div>
-            <div class="service-info">
-                <h4>Seguidores Brasileiros Reais 🇧🇷</h4>
-                <p>Contas 100% brasileiras e ativas</p>
-            </div>
-            <div class="service-footer">
-                <span class="service-price">R$ 35,00 <small>/ 1k</small></span>
-                <span class="radio-indicator"><i class="fa-solid fa-check"></i></span>
-            </div>
-        </div>
+                <div class="order-grid">
+                    <div class="order-form-card">
+                        
+                        <!-- SELETOR CUSTOMIZADO DE PLATAFORMA -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-layer-group"></i> Selecione a Plataforma</label>
+                            <div class="custom-dropdown" id="platform-dropdown">
+                                <div class="dropdown-select-box" onclick="togglePlatformDropdown()">
+                                    <div class="dropdown-selected-value" id="selected-platform-text">
+                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i> Instagram
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down dropdown-arrow" id="platform-dropdown-arrow"></i>
+                                </div>
+                                <div class="dropdown-options-list" id="platform-dropdown-options">
+                                    <div class="dropdown-option active" data-platform="instagram" onclick="selectPlatformOption(this, 'Instagram', 'fa-brands fa-instagram', 'ig-color')">
+                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i> Instagram
+                                    </div>
+                                    <div class="dropdown-option" data-platform="tiktok" onclick="selectPlatformOption(this, 'TikTok', 'fa-brands fa-tiktok', 'tk-color')">
+                                        <i class="fa-brands fa-tiktok icon-app-pulse tk-color"></i> TikTok
+                                    </div>
+                                    <div class="dropdown-option" data-platform="kwai" onclick="selectPlatformOption(this, 'Kwai', 'fa-solid fa-bolt', 'kw-color')">
+                                        <i class="fa-solid fa-bolt icon-app-pulse kw-color"></i> Kwai
+                                    </div>
+                                    <div class="dropdown-option" data-platform="youtube" onclick="selectPlatformOption(this, 'YouTube', 'fa-brands fa-youtube', 'yt-color')">
+                                        <i class="fa-brands fa-youtube icon-app-pulse yt-color"></i> YouTube
+                                    </div>
+                                    <div class="dropdown-option" data-platform="facebook" onclick="selectPlatformOption(this, 'Facebook', 'fa-brands fa-facebook', 'fb-color')">
+                                        <i class="fa-brands fa-facebook icon-app-pulse fb-color"></i> Facebook
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-        <!-- Serviço 3 (Disponível) -->
-        <div class="service-card" data-price="0.008" onclick="selectCustomService(this)">
-            <div class="service-header">
-                <div class="service-platform instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </div>
-                <span class="status-pill online"><i class="fa-solid fa-circle"></i> Online</span>
-            </div>
-            <div class="service-info">
-                <h4>Curtidas Instantâneas</h4>
-                <p>Início imediato em até 2 minutos</p>
-            </div>
-            <div class="service-footer">
-                <span class="service-price">R$ 8,00 <small>/ 1k</small></span>
-                <span class="radio-indicator"><i class="fa-solid fa-check"></i></span>
-            </div>
-        </div>
+                        <!-- SELETOR CUSTOMIZADO DE CATEGORIA / SERVIÇO -->
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-list-check"></i> Categoria / Serviço</label>
+                            <div class="custom-dropdown" id="custom-dropdown">
+                                <div class="dropdown-select-box" onclick="toggleServiceDropdown()">
+                                    <div class="dropdown-selected-value" id="selected-service-text">
+                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i> Instagram | Seguidores Brasileiros - Emergencial 🚨
+                                    </div>
+                                    <i class="fa-solid fa-chevron-down dropdown-arrow" id="dropdown-arrow"></i>
+                                </div>
+                                <div class="dropdown-options-list" id="dropdown-options">
+                                    <div class="dropdown-option active" data-price="0.035" onclick="selectServiceOption(this)">
+                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i> Instagram | Seguidores Brasileiros - Emergencial 🚨
+                                    </div>
+                                    <div class="dropdown-option" data-price="0.015" onclick="selectServiceOption(this)">
+                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i> Instagram | Seguidores Mundiais EMERGENCIAL 🚨
+                                    </div>
+                                    <div class="dropdown-option" data-price="0.008" onclick="selectServiceOption(this)">
+                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i> Instagram | Curtidas Brasileiras
+                                    </div>
+                                    <div class="dropdown-option" data-price="0.005" onclick="selectServiceOption(this)">
+                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i> Instagram | Curtidas Mundiais
+                                    </div>
+                                    <div class="dropdown-option" data-price="0.020" onclick="selectServiceOption(this)">
+                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i> Instagram | Comentários Brasileiros
+                                    </div>
+                                    <div class="dropdown-option" data-price="0.004" onclick="selectServiceOption(this)">
+                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i> Instagram | Visualizações em Reels
+                                    </div>
+                                    <div class="dropdown-option" data-price="0.018" onclick="selectServiceOption(this)">
+                                        <i class="fa-brands fa-tiktok icon-app-pulse tk-color"></i> TikTok - Seguidores Brasileiros
+                                    </div>
+                                    <div class="dropdown-option" data-price="0.012" onclick="selectServiceOption(this)">
+                                        <i class="fa-brands fa-tiktok icon-app-pulse tk-color"></i> TikTok | Seguidores Mundiais
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-        <!-- Serviço 4 (Fora do Ar / Manutenção) -->
-        <div class="service-card disabled">
-            <div class="service-header">
-                <div class="service-platform tiktok">
-                    <i class="fa-brands fa-tiktok"></i>
-                </div>
-                <span class="status-pill offline"><i class="fa-solid fa-triangle-exclamation"></i> Manutenção</span>
-            </div>
-            <div class="service-info">
-                <h4>TikTok Views & Live Stream</h4>
-                <p>Servidor em atualização técnica</p>
-            </div>
-            <div class="service-footer">
-                <span class="service-price text-muted">Indisponível</span>
-                <span class="radio-indicator lock"><i class="fa-solid fa-lock"></i></span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Campo oculto para guardar o preço do serviço selecionado -->
-    <input type="hidden" id="selected-service-price" value="0.015">
-</div>
-
-                <!-- NOVO MENU SUSPENSO CUSTOMIZADO DE PLATAFORMAS -->
-<div class="form-group">
-    <label><i class="fa-solid fa-layer-group"></i> Selecione a Plataforma</label>
-    
-    <div class="custom-dropdown" id="platform-dropdown">
-        <!-- Caixa principal que fica visível -->
-        <div class="dropdown-select-box" onclick="togglePlatformDropdown()">
-            <div class="dropdown-selected-value" id="selected-platform-text">
-                <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i> Instagram
-            </div>
-            <i class="fa-solid fa-chevron-down dropdown-arrow" id="platform-dropdown-arrow"></i>
-        </div>
-
-        <!-- Lista de Opções das Plataformas -->
-        <div class="dropdown-options-list" id="platform-dropdown-options">
-            <div class="dropdown-option active" data-platform="instagram" onclick="selectPlatformOption(this, 'Instagram', 'fa-brands fa-instagram', 'ig-color')">
-                <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i> Instagram
-            </div>
-            <div class="dropdown-option" data-platform="tiktok" onclick="selectPlatformOption(this, 'TikTok', 'fa-brands fa-tiktok', 'tk-color')">
-                <i class="fa-brands fa-tiktok icon-app-pulse tk-color"></i> TikTok
-            </div>
-            <div class="dropdown-option" data-platform="kwai" onclick="selectPlatformOption(this, 'Kwai', 'fa-solid fa-bolt', 'kw-color')">
-                <i class="fa-solid fa-bolt icon-app-pulse kw-color"></i> Kwai
-            </div>
-            <div class="dropdown-option" data-platform="youtube" onclick="selectPlatformOption(this, 'YouTube', 'fa-brands fa-youtube', 'yt-color')">
-                <i class="fa-brands fa-youtube icon-app-pulse yt-color"></i> YouTube
-            </div>
-            <div class="dropdown-option" data-platform="facebook" onclick="selectPlatformOption(this, 'Facebook', 'fa-brands fa-facebook', 'fb-color')">
-                <i class="fa-brands fa-facebook icon-app-pulse fb-color"></i> Facebook
-            </div>
-        </div>
-    </div>
-</div>
-
-                        <!-- NOVO MENU SUSPENSO CUSTOMIZADO (ESTILO PAINEL SMM) -->
-<div class="form-group">
-    <label><i class="fa-solid fa-list-check"></i> Categoria / Serviço</label>
-    
-    <div class="custom-dropdown" id="custom-dropdown">
-        <!-- Caixa principal que fica visível -->
-        <div class="dropdown-select-box" onclick="toggleDropdown()">
-            <div class="dropdown-selected-value" id="selected-service-text">
-                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Seguidores Brasileiros - Emergencial 🚨
-            </div>
-            <i class="fa-solid fa-chevron-down dropdown-arrow" id="dropdown-arrow"></i>
-        </div>
-
-        <!-- Lista de Opções (Dropdown que abre e fecha) -->
-        <div class="dropdown-options-list" id="dropdown-options">
-            <div class="dropdown-option active" data-price="0.035" onclick="selectDropdownOption(this, 'instagram', 'Instagram | Seguidores Brasileiros - Emergencial 🚨')">
-                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Seguidores Brasileiros - Emergencial 🚨
-            </div>
-            <div class="dropdown-option" data-price="0.015" onclick="selectDropdownOption(this, 'instagram', 'Instagram | Seguidores Mundiais EMERGENCIAL 🚨')">
-                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Seguidores Mundiais EMERGENCIAL 🚨
-            </div>
-            <div class="dropdown-option" data-price="0.008" onclick="selectDropdownOption(this, 'instagram', 'Instagram | Curtidas Brasileiras')">
-                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Curtidas Brasileiras
-            </div>
-            <div class="dropdown-option" data-price="0.005" onclick="selectDropdownOption(this, 'instagram', 'Instagram | Curtidas Mundiais')">
-                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Curtidas Mundiais
-            </div>
-            <div class="dropdown-option" data-price="0.020" onclick="selectDropdownOption(this, 'instagram', 'Instagram | Comentários Brasileiros')">
-                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Comentários Brasileiros
-            </div>
-            <div class="dropdown-option" data-price="0.004" onclick="selectDropdownOption(this, 'instagram', 'Instagram | Visualizações em Reels')">
-                <i class="fa-brands fa-instagram icon-app-pulse"></i> Instagram | Visualizações em Reels
-            </div>
-            <div class="dropdown-option" data-price="0.018" onclick="selectDropdownOption(this, 'tiktok', 'TikTok - Seguidores Brasileiros')">
-                <i class="fa-brands fa-tiktok icon-app-pulse"></i> TikTok - Seguidores Brasileiros
-            </div>
-            <div class="dropdown-option" data-price="0.012" onclick="selectDropdownOption(this, 'tiktok', 'TikTok | Seguidores Mundiais')">
-                <i class="fa-brands fa-tiktok icon-app-pulse"></i> TikTok | Seguidores Mundiais
-            </div>
-        </div>
-    </div>
-
-    <!-- Input oculto para o preço -->
-    <input type="hidden" id="selected-service-price" value="0.035">
-</div>
+                        <div class="form-group">
+                            <label><i class="fa-solid fa-link"></i> Link do Perfil ou Publicação</label>
+                            <input type="text" id="order-link" placeholder="https://www.instagram.com/seuusuario" required>
+                        </div>
 
                         <div class="form-group">
                             <label><i class="fa-solid fa-calculator"></i> Quantidade</label>
@@ -311,9 +231,11 @@
                             <label><i class="fa-solid fa-envelope"></i> Seu E-mail (Para receber comprovante e suporte)</label>
                             <input type="email" id="order-email" placeholder="seuemail@exemplo.com" required>
                         </div>
+
+                        <input type="hidden" id="selected-service-price" value="0.035">
                     </div>
 
-                    <!-- RESUMO E PAGAMENTO -->
+                    <!-- RESUMO DO PEDIDO E BOTÃO DE PAGAMENTO -->
                     <div class="order-summary-card">
                         <h3>Resumo do Pedido</h3>
                         <div class="summary-row">
@@ -326,7 +248,7 @@
                         </div>
                         <div class="summary-row total">
                             <span>Total a Pagar:</span>
-                            <strong id="sum-total" class="neon-text">R$ 15,00</strong>
+                            <strong id="sum-total" class="neon-text">R$ 35,00</strong>
                         </div>
 
                         <button class="btn-primary full-width" onclick="checkoutModal()">
@@ -360,42 +282,21 @@
                                 <td><span class="badge instagram">Instagram</span> Seguidores Mundiais 🚀</td>
                                 <td>R$ 15,00</td>
                                 <td>100 / 50.000</td>
-                                <td><button class="btn-table" onclick="quickBuy(101)">Comprar</button></td>
+                                <td><button class="btn-table" onclick="quickBuy('Instagram')">Comprar</button></td>
                             </tr>
                             <tr>
                                 <td>#102</td>
                                 <td><span class="badge instagram">Instagram</span> Seguidores Brasileiros 🇧🇷</td>
                                 <td>R$ 35,00</td>
                                 <td>100 / 20.000</td>
-                                <td><button class="btn-table" onclick="quickBuy(102)">Comprar</button></td>
+                                <td><button class="btn-table" onclick="quickBuy('Instagram')">Comprar</button></td>
                             </tr>
                             <tr>
                                 <td>#201</td>
                                 <td><span class="badge tiktok">TikTok</span> Seguidores Rápidos 🎵</td>
                                 <td>R$ 18,00</td>
                                 <td>100 / 30.000</td>
-                                <td><button class="btn-table" onclick="quickBuy(201)">Comprar</button></td>
-                            </tr>
-                            <tr>
-                                <td>#301</td>
-                                <td><span class="badge kwai">Kwai</span> Seguidores Ativos 🔥</td>
-                                <td>R$ 20,00</td>
-                                <td>100 / 25.000</td>
-                                <td><button class="btn-table" onclick="quickBuy(301)">Comprar</button></td>
-                            </tr>
-                            <tr>
-                                <td>#401</td>
-                                <td><span class="badge youtube">YouTube</span> Inscritos com Retenção 📺</td>
-                                <td>R$ 45,00</td>
-                                <td>50 / 10.000</td>
-                                <td><button class="btn-table" onclick="quickBuy(401)">Comprar</button></td>
-                            </tr>
-                            <tr>
-                                <td>#501</td>
-                                <td><span class="badge facebook">Facebook</span> Curtidas na Página 👍</td>
-                                <td>R$ 22,00</td>
-                                <td>100 / 15.000</td>
-                                <td><button class="btn-table" onclick="quickBuy(501)">Comprar</button></td>
+                                <td><button class="btn-table" onclick="quickBuy('TikTok')">Comprar</button></td>
                             </tr>
                         </tbody>
                     </table>
@@ -432,11 +333,7 @@
                 </div>
                 <div class="legal-content">
                     <h3>1. Aceitação dos Termos</h3>
-                    <p>Ao utilizar os serviços da Wolfbluesmm2.0, você concorda com os termos descritos nesta página. Nossos serviços são destinados a impulsionar a visibilidade nas redes sociais de forma rápida e segura.</p>
-                    <h3>2. Entrega e Garantia</h3>
-                    <p>As entregas começam automaticamente após a confirmação do pagamento. Em caso de quedas superiores à garantia do serviço contratado, oferecemos reposição automática dentro do prazo estipulado.</p>
-                    <h3>3. Perfis Públicos</h3>
-                    <p>O perfil ou link informado no momento da compra deve estar configurado como **PÚBLICO**. Não nos responsabilizamos por pedidos feitos em contas privadas.</p>
+                    <p>Ao utilizar os serviços da Wolfbluesmm2.0, você concorda com os termos descritos nesta página.</p>
                 </div>
             </section>
 
@@ -448,9 +345,7 @@
                 </div>
                 <div class="legal-content">
                     <h3>Proteção de Dados</h3>
-                    <p>Não exigimos senha de acesso às suas redes sociais. Solicitamos apenas o link público do seu perfil ou publicação e um e-mail válido para contato e acompanhamento.</p>
-                    <h3>Segurança de Pagamento</h3>
-                    <p>Todas as transações financeiras são criptografadas e processadas por gateways de pagamento seguros, garantindo que seus dados bancários ou chaves PIX jamais sejam armazenados em nossos servidores.</p>
+                    <p>Não exigimos senha de acesso às suas redes sociais.</p>
                 </div>
             </section>
 
@@ -458,7 +353,7 @@
             <section id="section-blog" class="content-section">
                 <div class="section-header-box">
                     <h2><i class="fa-solid fa-blog text-neon"></i> Blog & Dicas de Crescimento</h2>
-                    <p>Aprenda estratégias para viralizar no Instagram, TikTok, Kwai e muito mais.</p>
+                    <p>Aprenda estratégias para viralizar nas redes sociais.</p>
                 </div>
                 <div class="blog-grid">
                     <div class="blog-card">
@@ -466,15 +361,6 @@
                         <div class="blog-body">
                             <span class="blog-date">10 Out, 2026</span>
                             <h3>Como o Algoritmo do Instagram Entrega seus Reels em 2026</h3>
-                            <p>Descubra os principais fatores de engajamento que fazem seu vídeo atingir a aba Explorar.</p>
-                        </div>
-                    </div>
-                    <div class="blog-card">
-                        <div class="blog-img"><i class="fa-solid fa-video"></i></div>
-                        <div class="blog-body">
-                            <span class="blog-date">05 Out, 2026</span>
-                            <h3>Estratégias Práticas para Crescer no TikTok do Zero</h3>
-                            <p>Dicas valiosas para reter a atenção do usuário nos primeiros 3 segundos de vídeo.</p>
                         </div>
                     </div>
                 </div>
@@ -485,15 +371,8 @@
                 <div class="hero-banner app-banner">
                     <div class="hero-text">
                         <h2>Baixe o Aplicativo <span class="neon-text">Wolfbluesmm2.0</span></h2>
-                        <p>Tenha o painel SMM na palma da sua mão. Faça pedidos mais rápido, acompanhe relatórios e receba notificações push em tempo real.</p>
                         <div class="app-buttons">
-                            <button class="btn-store" onclick="alert('Download do APK iniciado!')"><i class="fa-brands fa-android"></i> Baixar para Android (APK)</button>
-                            <button class="btn-store" onclick="alert('Versão iOS disponível em breve na App Store!')"><i class="fa-brands fa-apple"></i> App Store (Em breve)</button>
-                        </div>
-                    </div>
-                    <div class="hero-visual">
-                        <div class="phone-mockup">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <button class="btn-store" onclick="alert('Download iniciado!')"><i class="fa-brands fa-android"></i> Baixar para Android (APK)</button>
                         </div>
                     </div>
                 </div>
@@ -519,7 +398,7 @@
                     <button class="btn-copy" onclick="copyPix()"><i class="fa-solid fa-copy"></i> Copiar</button>
                 </div>
                 <div class="modal-alert">
-                    <i class="fa-solid fa-circle-notch fa-spin"></i> Aguardando confirmação do pagamento... (O serviço inicia automaticamente após o PIX).
+                    <i class="fa-solid fa-circle-notch fa-spin"></i> Aguardando confirmação do pagamento...
                 </div>
             </div>
         </div>
