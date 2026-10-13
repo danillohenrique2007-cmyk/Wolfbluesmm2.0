@@ -1374,3 +1374,188 @@ body {
     color: var(--neon-blue);
     background: rgba(0, 212, 255, 0.08);
 }
+/* =========================================================
+   OTIMIZAÇÃO MOBILE PROFISSIONAL (Ecrãs Telemóveis)
+   ========================================================= */
+
+@media (max-width: 768px) {
+    /* 1. Ajuste Geral do Layout */
+    body {
+        overflow-x: hidden;
+    }
+
+    .topbar {
+        padding: 0 15px;
+        height: 65px;
+    }
+
+    .logo-text h1 {
+        font-size: 18px;
+    }
+
+    .logo-text p {
+        display: none; /* Oculta subtítulo em telemóveis para poupar espaço */
+    }
+
+    /* 2. Barra Lateral (Sidebar) transformada num menu inferior ou compacto */
+    .sidebar {
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        flex-direction: row;
+        border-right: none;
+        border-top: 1px solid var(--border-color);
+        background: rgba(11, 15, 29, 0.95);
+        backdrop-filter: blur(15px);
+        z-index: 999;
+        padding: 0 5px;
+        justify-content: space-around;
+    }
+
+    .sidebar-menu {
+        flex-direction: row;
+        padding: 5px;
+        gap: 5px;
+        width: 100%;
+        justify-content: space-around;
+        overflow-y: hidden;
+    }
+
+    .sidebar-menu .menu-item {
+        padding: 8px;
+        justify-content: center;
+        border-radius: 10px;
+    }
+
+    .sidebar-menu .menu-item span,
+    .sidebar-footer {
+        display: none; /* Oculta o texto e footer, mantendo apenas os ícones rápidos */
+    }
+
+    .sidebar-menu .menu-item .icon-box {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    /* 3. Área de Conteúdo Principal */
+    .main-content {
+        margin-left: 0 !important;
+        margin-bottom: 70px; /* Espaço para a barra fixa inferior */
+        padding: 15px !important;
+    }
+
+    /* 4. Hero Banner Adaptado */
+    .hero-banner {
+        flex-direction: column;
+        padding: 25px 20px;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-text h2 {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .hero-visual {
+        display: flex;
+        justify-content: center;
+    }
+
+    .wolf-card-glow {
+        width: 110px;
+        height: 110px;
+    }
+
+    .wolf-svg-hero {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* 5. Grelha de Pedidos (Formulário e Resumo lado a lado passam a empilhados) */
+    .order-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .order-form-card,
+    .order-summary-card {
+        padding: 20px 15px;
+    }
+
+    .order-summary-card {
+        position: static; /* Remove o sticky em mobile para evitar sobreposições */
+    }
+
+    /* 6. Grelha de Plataformas */
+    .platforms-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para telemóveis */
+        gap: 12px;
+    }
+
+    .platform-card {
+        padding: 20px 10px;
+    }
+
+    .p-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    .platform-card h4 {
+        font-size: 15px;
+    }
+
+    .platform-card p {
+        font-size: 11px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* 7. Tabelas e Filtros Responsivos */
+    .table-filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .search-box-custom {
+        min-width: 100%;
+    }
+
+    .filter-pills {
+        overflow-x: auto;
+        padding-bottom: 5px;
+        flex-wrap: nowrap;
+    }
+
+    .pill-btn {
+        flex-shrink: 0;
+    }
+
+    /* 8. Modais de Pagamento */
+    .modal-card {
+        width: 92%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    .qrcode-box {
+        width: 150px;
+        height: 150px;
+    }
+}
