@@ -14,7 +14,7 @@
 
     <!-- TOPBAR / HEADER -->
     <header class="topbar">
-        <div class="logo-area">
+        <div class="logo-area" onclick="switchSection('home')">
             <div class="logo-icon wolf-logo">
                 <svg class="wolf-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 3L8 7L3 5L5 11L2 14L8 16L12 21L16 16L22 14L19 11L21 5L16 7L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
@@ -259,108 +259,297 @@
                 </div>
             </section>
 
-            <!-- 3. SEÇÃO SERVIÇOS -->
+            <!-- 3. SEÇÃO SERVIÇOS (TOTALMENTE REDESENHADA E PROFISSIONAL) -->
             <section id="section-servicos" class="content-section">
                 <div class="section-header-box">
-                    <h2><i class="fa-solid fa-list-check text-neon"></i> Lista de Serviços & Preços</h2>
-                    <p>Confira nossa tabela completa de serviços ativos com os melhores preços do mercado.</p>
+                    <h2><i class="fa-solid fa-list-check text-neon"></i> Catálogo Completo de Serviços</h2>
+                    <p>Consulte a velocidade, garantias e tabela atualizada de preços por mil unidades.</p>
                 </div>
+
+                <div class="table-filter-bar">
+                    <div class="search-box-custom">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="service-search-input" onkeyup="filterServicesTable()" placeholder="Pesquisar serviço (ex: Instagram, Curtidas, TikTok)...">
+                    </div>
+                    <div class="filter-pills">
+                        <button class="pill-btn active" onclick="filterByPlatform('all', this)">Todos</button>
+                        <button class="pill-btn" onclick="filterByPlatform('Instagram', this)"><i class="fa-brands fa-instagram ig-color"></i> Instagram</button>
+                        <button class="pill-btn" onclick="filterByPlatform('TikTok', this)"><i class="fa-brands fa-tiktok tk-color"></i> TikTok</button>
+                        <button class="pill-btn" onclick="filterByPlatform('Kwai', this)"><i class="fa-solid fa-bolt kw-color"></i> Kwai</button>
+                        <button class="pill-btn" onclick="filterByPlatform('YouTube', this)"><i class="fa-brands fa-youtube yt-color"></i> YouTube</button>
+                    </div>
+                </div>
+
                 <div class="table-container">
-                    <table class="services-table">
+                    <table class="services-table" id="pro-services-table">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Serviço</th>
-                                <th>Preço por 1.000</th>
-                                <th>Mín / Máx</th>
+                                <th>Serviço & Categoria</th>
+                                <th>Preço (1.000)</th>
+                                <th>Mín. / Máx.</th>
+                                <th>Início Estimado</th>
+                                <th>Garantia</th>
                                 <th>Ação</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>#101</td>
-                                <td><span class="badge instagram">Instagram</span> Seguidores Mundiais 🚀</td>
-                                <td>R$ 15,00</td>
+                            <tr data-platform="Instagram">
+                                <td class="serv-id">#101</td>
+                                <td>
+                                    <div class="serv-name-box">
+                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i>
+                                        <div>
+                                            <strong>Instagram | Seguidores Brasileiros - Emergencial 🚨</strong>
+                                            <small>Contas reais com alta taxa de engajamento</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="price-tag">R$ 35,00</span></td>
                                 <td>100 / 50.000</td>
-                                <td><button class="btn-table" onclick="quickBuy('Instagram')">Comprar</button></td>
+                                <td><span class="status-speed"><i class="fa-solid fa-bolt"></i> Instantâneo</span></td>
+                                <td><span class="badge-guarantee">30 Dias Reposição</span></td>
+                                <td><button class="btn-table-action" onclick="quickBuy('Instagram')"><i class="fa-solid fa-cart-plus"></i> Comprar</button></td>
                             </tr>
-                            <tr>
-                                <td>#102</td>
-                                <td><span class="badge instagram">Instagram</span> Seguidores Brasileiros 🇧🇷</td>
-                                <td>R$ 35,00</td>
-                                <td>100 / 20.000</td>
-                                <td><button class="btn-table" onclick="quickBuy('Instagram')">Comprar</button></td>
+                            <tr data-platform="Instagram">
+                                <td class="serv-id">#102</td>
+                                <td>
+                                    <div class="serv-name-box">
+                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i>
+                                        <div>
+                                            <strong>Instagram | Seguidores Mundiais EMERGENCIAL 🚨</strong>
+                                            <small>Entrega ultra rápida para grandes perfis</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="price-tag">R$ 15,00</span></td>
+                                <td>100 / 100.000</td>
+                                <td><span class="status-speed"><i class="fa-solid fa-bolt"></i> 0-15 min</span></td>
+                                <td><span class="badge-guarantee">30 Dias Reposição</span></td>
+                                <td><button class="btn-table-action" onclick="quickBuy('Instagram')"><i class="fa-solid fa-cart-plus"></i> Comprar</button></td>
                             </tr>
-                            <tr>
-                                <td>#201</td>
-                                <td><span class="badge tiktok">TikTok</span> Seguidores Rápidos 🎵</td>
-                                <td>R$ 18,00</td>
+                            <tr data-platform="Instagram">
+                                <td class="serv-id">#103</td>
+                                <td>
+                                    <div class="serv-name-box">
+                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i>
+                                        <div>
+                                            <strong>Instagram | Curtidas Brasileiras de Alta Qualidade</strong>
+                                            <small>Ideal para impulsionar publicações no Explorar</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="price-tag">R$ 8,00</span></td>
+                                <td>50 / 20.000</td>
+                                <td><span class="status-speed"><i class="fa-solid fa-bolt"></i> Instantâneo</span></td>
+                                <td><span class="badge-guarantee green">Sem Queda</span></td>
+                                <td><button class="btn-table-action" onclick="quickBuy('Instagram')"><i class="fa-solid fa-cart-plus"></i> Comprar</button></td>
+                            </tr>
+                            <tr data-platform="TikTok">
+                                <td class="serv-id">#201</td>
+                                <td>
+                                    <div class="serv-name-box">
+                                        <i class="fa-brands fa-tiktok icon-app-pulse tk-color"></i>
+                                        <div>
+                                            <strong>TikTok | Seguidores Reais Brasileiros</strong>
+                                            <small>Aumente sua autoridade para lives e parcerias</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="price-tag">R$ 18,00</span></td>
                                 <td>100 / 30.000</td>
-                                <td><button class="btn-table" onclick="quickBuy('TikTok')">Comprar</button></td>
+                                <td><span class="status-speed"><i class="fa-solid fa-bolt"></i> 0-30 min</span></td>
+                                <td><span class="badge-guarantee">30 Dias Reposição</span></td>
+                                <td><button class="btn-table-action" onclick="quickBuy('TikTok')"><i class="fa-solid fa-cart-plus"></i> Comprar</button></td>
+                            </tr>
+                            <tr data-platform="Kwai">
+                                <td class="serv-id">#301</td>
+                                <td>
+                                    <div class="serv-name-box">
+                                        <i class="fa-solid fa-bolt icon-app-pulse kw-color"></i>
+                                        <div>
+                                            <strong>Kwai | Visualizações e Curtidas em Vídeos</strong>
+                                            <small>Suba no algoritmo e monetize mais rápido</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="price-tag">R$ 5,00</span></td>
+                                <td>500 / 500.000</td>
+                                <td><span class="status-speed"><i class="fa-solid fa-bolt"></i> Instantâneo</span></td>
+                                <td><span class="badge-guarantee green">Garantido</span></td>
+                                <td><button class="btn-table-action" onclick="quickBuy('Kwai')"><i class="fa-solid fa-cart-plus"></i> Comprar</button></td>
+                            </tr>
+                            <tr data-platform="YouTube">
+                                <td class="serv-id">#401</td>
+                                <td>
+                                    <div class="serv-name-box">
+                                        <i class="fa-brands fa-youtube icon-app-pulse yt-color"></i>
+                                        <div>
+                                            <strong>YouTube | Inscritos Orgânicos com Retenção</strong>
+                                            <small>Segurança total para monetização de canais</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="price-tag">R$ 45,00</span></td>
+                                <td>50 / 10.000</td>
+                                <td><span class="status-speed"><i class="fa-solid fa-clock"></i> 1-12 horas</span></td>
+                                <td><span class="badge-guarantee">60 Dias Reposição</span></td>
+                                <td><button class="btn-table-action" onclick="quickBuy('YouTube')"><i class="fa-solid fa-cart-plus"></i> Comprar</button></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </section>
 
-            <!-- 4. SEÇÃO SUPORTE -->
+            <!-- 4. SEÇÃO SUPORTE (DESIGN MODERNO VIP) -->
             <section id="section-suporte" class="content-section">
                 <div class="section-header-box">
-                    <h2><i class="fa-solid fa-headset text-neon"></i> Central de Suporte 24/7</h2>
-                    <p>Precisa de ajuda com seu pedido? Nossa equipe de atendimento está pronta para te atender.</p>
+                    <h2><i class="fa-solid fa-headset text-neon"></i> Central de Suporte & Atendimento VIP</h2>
+                    <p>Nossa equipe técnica está disponível para resolver dúvidas ou acelerar seu pedido em tempo real.</p>
                 </div>
-                <div class="support-grid">
-                    <div class="support-card">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <h3>Atendimento via WhatsApp</h3>
-                        <p>Resposta rápida em até 5 minutos com atendentes reais.</p>
-                        <a href="https://wa.me/" target="_blank" class="btn-primary">Chamar no WhatsApp</a>
+
+                <div class="support-cards-grid">
+                    <div class="support-pro-card">
+                        <div class="sup-icon-header whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="sup-card-body">
+                            <span class="live-status-pill"><i class="fa-solid fa-circle"></i> Online Agora</span>
+                            <h3>Atendimento via WhatsApp</h3>
+                            <p>Fale diretamente com um especialista e tire suas dúvidas com resposta instantânea.</p>
+                            <div class="sup-meta">
+                                <span><i class="fa-solid fa-clock"></i> Tempo médio: ~2 min</span>
+                            </div>
+                            <a href="https://wa.me/" target="_blank" class="btn-sup-action wa">
+                                <i class="fa-brands fa-whatsapp"></i> Iniciar Chat no WhatsApp
+                            </a>
+                        </div>
                     </div>
-                    <div class="support-card">
-                        <i class="fa-solid fa-envelope-open-text"></i>
-                        <h3>Suporte por E-mail</h3>
-                        <p>Envie sua dúvida para suporte@wolfbluesmm.com</p>
-                        <a href="mailto:suporte@wolfbluesmm.com" class="btn-outline">Enviar E-mail</a>
+
+                    <div class="support-pro-card">
+                        <div class="sup-icon-header email">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <div class="sup-card-body">
+                            <span class="live-status-pill blue"><i class="fa-solid fa-clock"></i> Resposta em 1h</span>
+                            <h3>Suporte via E-mail</h3>
+                            <p>Envie comprovantes de pagamento ou dúvidas sobre pedidos corporativos de grande porte.</p>
+                            <div class="sup-meta">
+                                <span><i class="fa-solid fa-shield-check"></i> suporte@wolfbluesmm.com</span>
+                            </div>
+                            <a href="mailto:suporte@wolfbluesmm.com" class="btn-sup-action email">
+                                <i class="fa-solid fa-paper-plane"></i> Enviar Mensagem por E-mail
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="support-pro-card">
+                        <div class="sup-icon-header faq">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </div>
+                        <div class="sup-card-body">
+                            <span class="live-status-pill purple"><i class="fa-solid fa-bolt"></i> Autoatendimento</span>
+                            <h3>Perguntas Frequentes</h3>
+                            <p>Confira respostas imediatas sobre prazos de entrega, garantia e funcionamento de serviços.</p>
+                            <div class="sup-meta">
+                                <span><i class="fa-solid fa-book-open"></i> Guia Rápido SMM</span>
+                            </div>
+                            <button class="btn-sup-action outline" onclick="switchSection('termos')">
+                                <i class="fa-solid fa-arrow-right"></i> Ver Termos e Dúvidas
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- 5. TERMOS DE USO -->
+            <!-- 5. TERMOS DE USO (CARDS ESTRUTURADOS) -->
             <section id="section-termos" class="content-section">
                 <div class="section-header-box">
-                    <h2><i class="fa-solid fa-file-contract text-neon"></i> Termos de Uso</h2>
-                    <p>Última atualização: Outubro de 2026</p>
+                    <h2><i class="fa-solid fa-file-contract text-neon"></i> Termos de Uso e Condições</h2>
+                    <p>Leia atentamente as diretrizes de funcionamento da plataforma Wolfbluesmm2.0.</p>
                 </div>
-                <div class="legal-content">
-                    <h3>1. Aceitação dos Termos</h3>
-                    <p>Ao utilizar os serviços da Wolfbluesmm2.0, você concorda com os termos descritos nesta página.</p>
+                <div class="legal-grid">
+                    <div class="legal-card">
+                        <div class="legal-card-icon"><i class="fa-solid fa-user-check"></i></div>
+                        <h3>1. Privacidade & Segurança do Perfil</h3>
+                        <p>Nunca solicitamos a senha da sua conta social. O único requisito é que o perfil ou link informado esteja configurado como <strong>PÚBLICO</strong> durante todo o envio do pedido.</p>
+                    </div>
+                    <div class="legal-card">
+                        <div class="legal-card-icon"><i class="fa-solid fa-rotate-left"></i></div>
+                        <h3>2. Política de Reposição (Refill)</h3>
+                        <p>Serviços com selo de garantia possuem sistema de reposição automática ou manual caso haja oscilações naturais nas redes dentro do prazo especificado no catálogo.</p>
+                    </div>
+                    <div class="legal-card">
+                        <div class="legal-card-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
+                        <h3>3. Prazos e Cancelamentos</h3>
+                        <p>Os pedidos iniciam automaticamente após a aprovação do pagamento no sistema. Pedidos em andamento não podem ser pausados ou transferidos para outros links.</p>
+                    </div>
                 </div>
             </section>
 
             <!-- 6. POLÍTICA DE PRIVACIDADE -->
             <section id="section-privacidade" class="content-section">
                 <div class="section-header-box">
-                    <h2><i class="fa-solid fa-shield-halved text-neon"></i> Política de Privacidade</h2>
-                    <p>Sua privacidade é nossa prioridade máxima.</p>
+                    <h2><i class="fa-solid fa-shield-halved text-neon"></i> Política de Privacidade & Proteção de Dados</h2>
+                    <p>Compromisso total com o anonimato e sigilo das transações dos nossos clientes.</p>
                 </div>
-                <div class="legal-content">
-                    <h3>Proteção de Dados</h3>
-                    <p>Não exigimos senha de acesso às suas redes sociais.</p>
+                <div class="legal-grid">
+                    <div class="legal-card">
+                        <div class="legal-card-icon"><i class="fa-solid fa-lock"></i></div>
+                        <h3>Criptografia de Ponta a Ponta</h3>
+                        <p>Todas as comunicações e pagamentos via PIX/Cartão são processadas com certificação de segurança SSL de 256 bits, garantindo total confidencialidade.</p>
+                    </div>
+                    <div class="legal-card">
+                        <div class="legal-card-icon"><i class="fa-solid fa-user-shield"></i></div>
+                        <h3>Uso Estrito de Dados</h3>
+                        <p>Seu e-mail é utilizado unicamente para o envio do comprovante de compra e atualizações do status do seu pedido, sem envio de spams.</p>
+                    </div>
                 </div>
             </section>
 
-            <!-- 7. BLOG -->
+            <!-- 7. BLOG (ESTILO NOTÍCIAS TECH FUTURISTA) -->
             <section id="section-blog" class="content-section">
                 <div class="section-header-box">
-                    <h2><i class="fa-solid fa-blog text-neon"></i> Blog & Dicas de Crescimento</h2>
-                    <p>Aprenda estratégias para viralizar nas redes sociais.</p>
+                    <h2><i class="fa-solid fa-blog text-neon"></i> Central de Conhecimento & Growth Digital</h2>
+                    <p>Artigos e estratégias exclusivas para impulsionar seu alcance e engajamento orgânico.</p>
                 </div>
-                <div class="blog-grid">
-                    <div class="blog-card">
-                        <div class="blog-img"><i class="fa-solid fa-chart-line"></i></div>
-                        <div class="blog-body">
-                            <span class="blog-date">10 Out, 2026</span>
-                            <h3>Como o Algoritmo do Instagram Entrega seus Reels em 2026</h3>
+                <div class="blog-grid-pro">
+                    <div class="blog-post-card">
+                        <div class="blog-thumb">
+                            <span class="blog-tag ig">Instagram 2026</span>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date"><i class="fa-regular fa-calendar"></i> 12 de Outubro, 2026</span>
+                            <h3>Como Romper o Algoritmo do Instagram e Viralizar no Reels</h3>
+                            <p>Aprenda a métrica de retenção dos primeiros 3 segundos e como utilizar o impulso de curtidas de forma estratégica.</p>
+                            <a href="#" class="blog-read-more" onclick="alert('Artigo completo estará disponível na próxima atualização!')">Ler Artigo Completo <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="blog-post-card">
+                        <div class="blog-thumb tiktok-bg">
+                            <span class="blog-tag tk">TikTok Trends</span>
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date"><i class="fa-regular fa-calendar"></i> 08 de Outubro, 2026</span>
+                            <h3>Estratégias Pro para Monetizar Lives e Vídeos no TikTok</h3>
+                            <p>Descubra como alcançar o limite de seguidores necessários para liberar transmissões ao vivo e presentes virtuais.</p>
+                            <a href="#" class="blog-read-more" onclick="alert('Artigo completo estará disponível na próxima atualização!')">Ler Artigo Completo <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="blog-post-card">
+                        <div class="blog-thumb kwai-bg">
+                            <span class="blog-tag kw">Kwai & Shorts</span>
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <div class="blog-content">
+                            <span class="blog-date"><i class="fa-regular fa-calendar"></i> 02 de Outubro, 2026</span>
+                            <h3>O Guia Definitivo do Crescimento Rápido no Kwai</h3>
+                            <p>Por que a constância e o impulso inicial de visualizações transformam um perfil comum em uma autoridade recomendada.</p>
+                            <a href="#" class="blog-read-more" onclick="alert('Artigo completo estará disponível na próxima atualização!')">Ler Artigo Completo <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -368,11 +557,30 @@
 
             <!-- 8. BAIXE O APP -->
             <section id="section-baixar-app" class="content-section">
-                <div class="hero-banner app-banner">
+                <div class="hero-banner app-banner-pro">
                     <div class="hero-text">
-                        <h2>Baixe o Aplicativo <span class="neon-text">Wolfbluesmm2.0</span></h2>
+                        <h2>Baixe o App Oficial <span class="neon-text">Wolfbluesmm2.0</span></h2>
+                        <p>Tenha acesso a descontos exclusivos, acompanhamento de pedidos em tempo real e notificações Push na palma da sua mão.</p>
+                        
+                        <div class="app-features-list">
+                            <span><i class="fa-solid fa-check text-neon"></i> Pedidos 2x mais rápidos</span>
+                            <span><i class="fa-solid fa-check text-neon"></i> Notificações de Reposição</span>
+                            <span><i class="fa-solid fa-check text-neon"></i> Interface Ultra Leve</span>
+                        </div>
+
                         <div class="app-buttons">
-                            <button class="btn-store" onclick="alert('Download iniciado!')"><i class="fa-brands fa-android"></i> Baixar para Android (APK)</button>
+                            <button class="btn-store primary" onclick="alert('Download do aplicativo APK iniciado com sucesso!')">
+                                <i class="fa-brands fa-android"></i> Download Direto (APK)
+                            </button>
+                            <button class="btn-store secondary" onclick="alert('Versão para iPhone em breve na App Store!')">
+                                <i class="fa-brands fa-apple"></i> iOS App Store (Em Breve)
+                            </button>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="app-qr-box">
+                            <i class="fa-solid fa-qrcode"></i>
+                            <small>Escaneie para Baixar</small>
                         </div>
                     </div>
                 </div>
