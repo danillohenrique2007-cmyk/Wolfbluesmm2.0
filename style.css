@@ -1192,3 +1192,184 @@ body {
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
 }
+/* =========================================================
+   NOVO DESIGN REFINADO PARA A CENTRAL DE SUPORTE VIP
+   ========================================================= */
+
+.support-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+.support-pro-card {
+    background: rgba(18, 24, 43, 0.7);
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    border-radius: 20px;
+    padding: 28px;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.support-pro-card:hover {
+    border-color: var(--neon-blue);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(0, 212, 255, 0.18);
+    background: rgba(18, 24, 43, 0.95);
+}
+
+/* Topo do Card */
+.sup-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sup-icon-header {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.sup-icon-header.whatsapp {
+    background: rgba(37, 211, 102, 0.12);
+    color: #25d366;
+    border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.sup-icon-header.email {
+    background: rgba(0, 212, 255, 0.12);
+    color: var(--neon-blue);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.sup-icon-header.faq {
+    background: rgba(138, 43, 226, 0.12);
+    color: #a855f7;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+/* Status Badges */
+.live-status-pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.live-status-pill.wa-pill {
+    color: #25d366;
+    background: rgba(37, 211, 102, 0.1);
+    border: 1px solid rgba(37, 211, 102, 0.25);
+}
+
+.live-status-pill.blue {
+    color: var(--neon-blue);
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid rgba(0, 212, 255, 0.25);
+}
+
+.live-status-pill.purple {
+    color: #a855f7;
+    background: rgba(138, 43, 226, 0.1);
+    border: 1px solid rgba(138, 43, 226, 0.25);
+}
+
+/* Conteúdo */
+.sup-card-body {
+    flex: 1;
+}
+
+.sup-card-body h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.sup-card-body p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Rodapé dos Cards */
+.sup-card-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sup-meta {
+    font-size: 13px;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sup-meta i {
+    color: var(--neon-blue);
+}
+
+/* Botões */
+.btn-sup-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 13px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-sup-action.wa {
+    background: #25d366;
+    color: #070913;
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.25);
+}
+
+.btn-sup-action.email {
+    background: var(--neon-blue);
+    color: #070913;
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.25);
+}
+
+.btn-sup-action.outline {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    color: #fff;
+}
+
+.btn-sup-action:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+.btn-sup-action.outline:hover {
+    border-color: var(--neon-blue);
+    color: var(--neon-blue);
+    background: rgba(0, 212, 255, 0.08);
+}
