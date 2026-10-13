@@ -259,147 +259,186 @@
                 </div>
             </section>
 
-            <!-- 3. SEÇÃO SERVIÇOS (TOTALMENTE REDESENHADA E PROFISSIONAL) -->
-            <section id="section-servicos" class="content-section">
-                <div class="section-header-box">
-                    <h2><i class="fa-solid fa-list-check text-neon"></i> Catálogo Completo de Serviços</h2>
-                    <p>Consulte a velocidade, garantias e tabela atualizada de preços por mil unidades.</p>
-                </div>
+            <!-- 3. SEÇÃO SERVIÇOS (DESIGN CLEAN & PREMIUM) -->
+<section id="section-servicos" class="content-section">
+    <div class="section-header-box">
+        <h2><i class="fa-solid fa-list-check text-neon"></i> Catálogo Completo de Serviços</h2>
+        <p>Consulte a velocidade, garantias e tabela atualizada de preços por mil unidades.</p>
+    </div>
 
-                <div class="table-filter-bar">
-                    <div class="search-box-custom">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" id="service-search-input" onkeyup="filterServicesTable()" placeholder="Pesquisar serviço (ex: Instagram, Curtidas, TikTok)...">
-                    </div>
-                    <div class="filter-pills">
-                        <button class="pill-btn active" onclick="filterByPlatform('all', this)">Todos</button>
-                        <button class="pill-btn" onclick="filterByPlatform('Instagram', this)"><i class="fa-brands fa-instagram ig-color"></i> Instagram</button>
-                        <button class="pill-btn" onclick="filterByPlatform('TikTok', this)"><i class="fa-brands fa-tiktok tk-color"></i> TikTok</button>
-                        <button class="pill-btn" onclick="filterByPlatform('Kwai', this)"><i class="fa-solid fa-bolt kw-color"></i> Kwai</button>
-                        <button class="pill-btn" onclick="filterByPlatform('YouTube', this)"><i class="fa-brands fa-youtube yt-color"></i> YouTube</button>
-                    </div>
-                </div>
+    <!-- Barra de busca e filtros rápida -->
+    <div class="table-filter-bar">
+        <div class="search-box-custom">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="service-search-input" onkeyup="filterServicesTable()" placeholder="Pesquisar por serviço, ID ou palavra-chave...">
+        </div>
+        <div class="filter-pills">
+            <button class="pill-btn active" onclick="filterByPlatform('all', this)">Todos</button>
+            <button class="pill-btn" onclick="filterByPlatform('Instagram', this)"><i class="fa-brands fa-instagram ig-color"></i> Instagram</button>
+            <button class="pill-btn" onclick="filterByPlatform('TikTok', this)"><i class="fa-brands fa-tiktok tk-color"></i> TikTok</button>
+            <button class="pill-btn" onclick="filterByPlatform('Kwai', this)"><i class="fa-solid fa-bolt kw-color"></i> Kwai</button>
+            <button class="pill-btn" onclick="filterByPlatform('YouTube', this)"><i class="fa-brands fa-youtube yt-color"></i> YouTube</button>
+        </div>
+    </div>
 
-                <div class="table-container">
-                    <table class="services-table" id="pro-services-table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Serviço & Categoria</th>
-                                <th>Preço (1.000)</th>
-                                <th>Mín. / Máx.</th>
-                                <th>Início Estimado</th>
-                                <th>Garantia</th>
-                                <th>Ação</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr data-platform="Instagram">
-                                <td class="serv-id">#101</td>
-                                <td>
-                                    <div class="serv-name-box">
-                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i>
-                                        <div>
-                                            <strong>Instagram | Seguidores Brasileiros - Emergencial 🚨</strong>
-                                            <small>Contas reais com alta taxa de engajamento</small>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><span class="price-tag">R$ 35,00</span></td>
-                                <td>100 / 50.000</td>
-                                <td><span class="status-speed"><i class="fa-solid fa-bolt"></i> Instantâneo</span></td>
-                                <td><span class="badge-guarantee">30 Dias Reposição</span></td>
-                                <td><button class="btn-table-action" onclick="quickBuy('Instagram')"><i class="fa-solid fa-cart-plus"></i> Comprar</button></td>
-                            </tr>
-                            <tr data-platform="Instagram">
-                                <td class="serv-id">#102</td>
-                                <td>
-                                    <div class="serv-name-box">
-                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i>
-                                        <div>
-                                            <strong>Instagram | Seguidores Mundiais EMERGENCIAL 🚨</strong>
-                                            <small>Entrega ultra rápida para grandes perfis</small>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><span class="price-tag">R$ 15,00</span></td>
-                                <td>100 / 100.000</td>
-                                <td><span class="status-speed"><i class="fa-solid fa-bolt"></i> 0-15 min</span></td>
-                                <td><span class="badge-guarantee">30 Dias Reposição</span></td>
-                                <td><button class="btn-table-action" onclick="quickBuy('Instagram')"><i class="fa-solid fa-cart-plus"></i> Comprar</button></td>
-                            </tr>
-                            <tr data-platform="Instagram">
-                                <td class="serv-id">#103</td>
-                                <td>
-                                    <div class="serv-name-box">
-                                        <i class="fa-brands fa-instagram icon-app-pulse ig-color"></i>
-                                        <div>
-                                            <strong>Instagram | Curtidas Brasileiras de Alta Qualidade</strong>
-                                            <small>Ideal para impulsionar publicações no Explorar</small>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><span class="price-tag">R$ 8,00</span></td>
-                                <td>50 / 20.000</td>
-                                <td><span class="status-speed"><i class="fa-solid fa-bolt"></i> Instantâneo</span></td>
-                                <td><span class="badge-guarantee green">Sem Queda</span></td>
-                                <td><button class="btn-table-action" onclick="quickBuy('Instagram')"><i class="fa-solid fa-cart-plus"></i> Comprar</button></td>
-                            </tr>
-                            <tr data-platform="TikTok">
-                                <td class="serv-id">#201</td>
-                                <td>
-                                    <div class="serv-name-box">
-                                        <i class="fa-brands fa-tiktok icon-app-pulse tk-color"></i>
-                                        <div>
-                                            <strong>TikTok | Seguidores Reais Brasileiros</strong>
-                                            <small>Aumente sua autoridade para lives e parcerias</small>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><span class="price-tag">R$ 18,00</span></td>
-                                <td>100 / 30.000</td>
-                                <td><span class="status-speed"><i class="fa-solid fa-bolt"></i> 0-30 min</span></td>
-                                <td><span class="badge-guarantee">30 Dias Reposição</span></td>
-                                <td><button class="btn-table-action" onclick="quickBuy('TikTok')"><i class="fa-solid fa-cart-plus"></i> Comprar</button></td>
-                            </tr>
-                            <tr data-platform="Kwai">
-                                <td class="serv-id">#301</td>
-                                <td>
-                                    <div class="serv-name-box">
-                                        <i class="fa-solid fa-bolt icon-app-pulse kw-color"></i>
-                                        <div>
-                                            <strong>Kwai | Visualizações e Curtidas em Vídeos</strong>
-                                            <small>Suba no algoritmo e monetize mais rápido</small>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><span class="price-tag">R$ 5,00</span></td>
-                                <td>500 / 500.000</td>
-                                <td><span class="status-speed"><i class="fa-solid fa-bolt"></i> Instantâneo</span></td>
-                                <td><span class="badge-guarantee green">Garantido</span></td>
-                                <td><button class="btn-table-action" onclick="quickBuy('Kwai')"><i class="fa-solid fa-cart-plus"></i> Comprar</button></td>
-                            </tr>
-                            <tr data-platform="YouTube">
-                                <td class="serv-id">#401</td>
-                                <td>
-                                    <div class="serv-name-box">
-                                        <i class="fa-brands fa-youtube icon-app-pulse yt-color"></i>
-                                        <div>
-                                            <strong>YouTube | Inscritos Orgânicos com Retenção</strong>
-                                            <small>Segurança total para monetização de canais</small>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td><span class="price-tag">R$ 45,00</span></td>
-                                <td>50 / 10.000</td>
-                                <td><span class="status-speed"><i class="fa-solid fa-clock"></i> 1-12 horas</span></td>
-                                <td><span class="badge-guarantee">60 Dias Reposição</span></td>
-                                <td><button class="btn-table-action" onclick="quickBuy('YouTube')"><i class="fa-solid fa-cart-plus"></i> Comprar</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+    <!-- Tabela Estilizada em Cards de Linha -->
+    <div class="pro-table-wrapper">
+        <table class="services-table-v2" id="pro-services-table">
+            <thead>
+                <tr>
+                    <th style="width: 80px;">ID</th>
+                    <th>Serviço & Detalhes</th>
+                    <th style="width: 140px;">Preço / 1k</th>
+                    <th style="width: 130px;">Mín. / Máx.</th>
+                    <th style="width: 130px;">Velocidade</th>
+                    <th style="width: 140px;">Garantia</th>
+                    <th style="width: 120px; text-align: center;">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <!-- SERVIÇO 1 -->
+                <tr data-platform="Instagram">
+                    <td><span class="id-badge">#101</span></td>
+                    <td>
+                        <div class="serv-details">
+                            <div class="platform-icon-circle ig"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="serv-text">
+                                <h4>Instagram | Seguidores Brasileiros - Emergencial 🚨</h4>
+                                <p>Perfis brasileiros reais, ativos e com alta taxa de engajamento.</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td><div class="price-box">R$ 35,00</div></td>
+                    <td><span class="range-text">100 / 50.000</span></td>
+                    <td><span class="speed-badge fast"><i class="fa-solid fa-bolt"></i> Instantâneo</span></td>
+                    <td><span class="guarantee-badge purple">30d Reposição</span></td>
+                    <td style="text-align: center;">
+                        <button class="btn-buy-now" onclick="quickBuy('Instagram')">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar
+                        </button>
+                    </td>
+                </tr>
+
+                <!-- SERVIÇO 2 -->
+                <tr data-platform="Instagram">
+                    <td><span class="id-badge">#102</span></td>
+                    <td>
+                        <div class="serv-details">
+                            <div class="platform-icon-circle ig"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="serv-text">
+                                <h4>Instagram | Seguidores Mundiais EMERGENCIAL 🚨</h4>
+                                <p>Envio ultra rápido para grandes contas e metas de crescimento.</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td><div class="price-box">R$ 15,00</div></td>
+                    <td><span class="range-text">100 / 100.000</span></td>
+                    <td><span class="speed-badge fast"><i class="fa-solid fa-bolt"></i> 0-15 min</span></td>
+                    <td><span class="guarantee-badge purple">30d Reposição</span></td>
+                    <td style="text-align: center;">
+                        <button class="btn-buy-now" onclick="quickBuy('Instagram')">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar
+                        </button>
+                    </td>
+                </tr>
+
+                <!-- SERVIÇO 3 -->
+                <tr data-platform="Instagram">
+                    <td><span class="id-badge">#103</span></td>
+                    <td>
+                        <div class="serv-details">
+                            <div class="platform-icon-circle ig"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="serv-text">
+                                <h4>Instagram | Curtidas Brasileiras de Alta Qualidade</h4>
+                                <p>Impulsione fotos e reels para a aba Explorar do Instagram.</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td><div class="price-box">R$ 8,00</div></td>
+                    <td><span class="range-text">50 / 20.000</span></td>
+                    <td><span class="speed-badge fast"><i class="fa-solid fa-bolt"></i> Instantâneo</span></td>
+                    <td><span class="guarantee-badge green">Sem Queda</span></td>
+                    <td style="text-align: center;">
+                        <button class="btn-buy-now" onclick="quickBuy('Instagram')">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar
+                        </button>
+                    </td>
+                </tr>
+
+                <!-- SERVIÇO 4 -->
+                <tr data-platform="TikTok">
+                    <td><span class="id-badge">#201</span></td>
+                    <td>
+                        <div class="serv-details">
+                            <div class="platform-icon-circle tk"><i class="fa-brands fa-tiktok"></i></div>
+                            <div class="serv-text">
+                                <h4>TikTok | Seguidores Reais Brasileiros</h4>
+                                <p>Atinja a meta de seguidores para liberar transmissões ao vivo.</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td><div class="price-box">R$ 18,00</div></td>
+                    <td><span class="range-text">100 / 30.000</span></td>
+                    <td><span class="speed-badge fast"><i class="fa-solid fa-bolt"></i> 0-30 min</span></td>
+                    <td><span class="guarantee-badge purple">30d Reposição</span></td>
+                    <td style="text-align: center;">
+                        <button class="btn-buy-now" onclick="quickBuy('TikTok')">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar
+                        </button>
+                    </td>
+                </tr>
+
+                <!-- SERVIÇO 5 -->
+                <tr data-platform="Kwai">
+                    <td><span class="id-badge">#301</span></td>
+                    <td>
+                        <div class="serv-details">
+                            <div class="platform-icon-circle kw"><i class="fa-solid fa-bolt"></i></div>
+                            <div class="serv-text">
+                                <h4>Kwai | Visualizações e Curtidas em Vídeos</h4>
+                                <p>Suba nas recomendações do algoritmo e aumente seus ganhos.</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td><div class="price-box">R$ 5,00</div></td>
+                    <td><span class="range-text">500 / 500.000</span></td>
+                    <td><span class="speed-badge fast"><i class="fa-solid fa-bolt"></i> Instantâneo</span></td>
+                    <td><span class="guarantee-badge green">Garantido</span></td>
+                    <td style="text-align: center;">
+                        <button class="btn-buy-now" onclick="quickBuy('Kwai')">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar
+                        </button>
+                    </td>
+                </tr>
+
+                <!-- SERVIÇO 6 -->
+                <tr data-platform="YouTube">
+                    <td><span class="id-badge">#401</span></td>
+                    <td>
+                        <div class="serv-details">
+                            <div class="platform-icon-circle yt"><i class="fa-brands fa-youtube"></i></div>
+                            <div class="serv-text">
+                                <h4>YouTube | Inscritos Orgânicos com Retenção</h4>
+                                <p>Segurança máxima para canais em processo de monetização.</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td><div class="price-box">R$ 45,00</div></td>
+                    <td><span class="range-text">50 / 10.000</span></td>
+                    <td><span class="speed-badge normal"><i class="fa-solid fa-clock"></i> 1-12 horas</span></td>
+                    <td><span class="guarantee-badge purple">60d Reposição</span></td>
+                    <td style="text-align: center;">
+                        <button class="btn-buy-now" onclick="quickBuy('YouTube')">
+                            <i class="fa-solid fa-cart-shopping"></i> Comprar
+                        </button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</section>
 
             <!-- 4. SEÇÃO SUPORTE (DESIGN MODERNO VIP) -->
             <section id="section-suporte" class="content-section">
