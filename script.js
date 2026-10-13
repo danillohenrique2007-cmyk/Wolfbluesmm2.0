@@ -71,9 +71,35 @@ function calculatePrice() {
     document.getElementById('sum-total').innerText = 'R$ ' + total;
 }
 
-// Botões da tabela de serviços
+// Botões da tabela de serviços para compra rápida
 function quickBuy(platformName) {
     switchSection('novo-pedido');
+}
+
+// Pesquisa em tempo real na tabela de serviços
+function filterServicesTable() {
+    const input = document.getElementById('service-search-input').value.toLowerCase();
+    const rows = document.querySelectorAll('#pro-services-table tbody tr');
+
+    rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = text.includes(input) ? '' : 'none';
+    });
+}
+
+// Filtro por botões de plataforma na tabela de serviços
+function filterByPlatform(platform, btnElement) {
+    document.querySelectorAll('.filter-pills .pill-btn').forEach(b => b.classList.remove('active'));
+    btnElement.classList.add('active');
+
+    const rows = document.querySelectorAll('#pro-services-table tbody tr');
+    rows.forEach(row => {
+        if (platform === 'all' || row.getAttribute('data-platform') === platform) {
+            row.style.display = '';
+        } else {
+            row.style.display = 'none';
+        }
+    });
 }
 
 // Fechar dropdowns ao clicar fora
