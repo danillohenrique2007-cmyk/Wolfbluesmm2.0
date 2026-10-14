@@ -1261,3 +1261,101 @@ body {
     .form-group label {
         font-size: 12px;
         margin-bottom: 5
+
+/* =========================================================
+   BARRA INFERIOR MOBILE REORGANIZADA E PROFISSIONAL
+   ========================================================= */
+
+@media(max-width: 900px) {
+    /* Menu Inferior Fixo Estilo App Nativo */
+    .sidebar {
+        width: 100%;
+        height: 62px;
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        flex-direction: row;
+        border-right: none;
+        border-top: 1px solid var(--border-color);
+        background: rgba(11, 15, 29, 0.98);
+        backdrop-filter: blur(15px);
+        z-index: 999;
+        padding: 0 4px;
+    }
+
+    .sidebar-menu {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        /* Distribui perfeitamente todos os itens com espaçamento igual */
+        justify-content: space-evenly;
+        align-items: center;
+        overflow-y: hidden;
+        gap: 0;
+    }
+
+    .sidebar-menu .menu-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 12.5%; /* Divide exatamente para caber todos os 8 botões sem quebrar */
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        gap: 3px;
+        background: transparent !important;
+        transform: none !important;
+    }
+
+    .sidebar-menu .menu-item .icon-box {
+        width: 26px;
+        height: 26px;
+        font-size: 14px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        color: var(--text-muted);
+        transition: var(--transition);
+    }
+
+    .sidebar-menu .menu-item span {
+        display: block;
+        font-size: 8px; /* Tamanho proporcional para caber em telas pequenas */
+        line-height: 1;
+        color: var(--text-muted);
+        text-align: center;
+        white-space: nowrap;
+        font-weight: 500;
+    }
+
+    /* Estados Ativos e de Hover Profissionais */
+    .sidebar-menu .menu-item.active .icon-box {
+        color: var(--neon-blue);
+        background: rgba(0, 212, 255, 0.12);
+        border-radius: 8px;
+    }
+
+    .sidebar-menu .menu-item.active span {
+        color: var(--neon-blue);
+        font-weight: 700;
+    }
+
+    .sidebar-footer {
+        display: none; 
+    }
+
+    /* Ajuste do conteúdo para não encobrir o menu inferior */
+    .main-content {
+        margin-left: 0 !important;
+        margin-bottom: 72px; 
+        padding: 12px !important;
+    }
+}
