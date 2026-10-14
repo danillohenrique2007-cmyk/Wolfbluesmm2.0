@@ -40,7 +40,7 @@ function selectPlatformOption(element, platformName, iconClass, colorClass) {
     filterServicesByPlatform(platformName.toLowerCase());
 }
 
-// Função para sincronizar a plataforma com os serviços
+// Sincronizar plataforma com serviços
 function filterServicesByPlatform(platformKey) {
     const serviceOptions = document.querySelectorAll('#dropdown-options .dropdown-option');
     let firstMatch = null;
