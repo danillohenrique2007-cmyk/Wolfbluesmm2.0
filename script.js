@@ -27,9 +27,8 @@ function togglePlatformDropdown() {
     document.getElementById('custom-dropdown').classList.remove('open');
 }
 
-// Selecionar plataforma e filtrar os serviços automaticamente
+// Selecionar plataforma
 function selectPlatformOption(element, platformName, iconClass, colorClass) {
-    // 1. Atualiza o texto e ícone da plataforma
     document.getElementById('selected-platform-text').innerHTML = `<i class="${iconClass} icon-app-pulse ${colorClass}"></i> ${platformName}`;
     
     document.querySelectorAll('#platform-dropdown-options .dropdown-option').forEach(opt => opt.classList.remove('active'));
@@ -38,31 +37,26 @@ function selectPlatformOption(element, platformName, iconClass, colorClass) {
     document.getElementById('sum-platform').innerText = platformName;
     document.getElementById('platform-dropdown').classList.remove('open');
 
-    // 2. Filtra os serviços para mostrar apenas a plataforma selecionada
     filterServicesByPlatform(platformName.toLowerCase());
 }
 
-// Função para filtrar os serviços de acordo com a plataforma escolhida
+// Função para sincronizar a plataforma com os serviços
 function filterServicesByPlatform(platformKey) {
     const serviceOptions = document.querySelectorAll('#dropdown-options .dropdown-option');
-    let firstVisibleOption = null;
+    let firstMatch = null;
 
     serviceOptions.forEach(option => {
-        const optionText = option.innerText.toLowerCase();
-
-        if (optionText.includes(platformKey)) {
+        const text = option.innerText.toLowerCase();
+        if (text.includes(platformKey)) {
             option.style.display = 'flex';
-            if (!firstVisibleOption) {
-                firstVisibleOption = option;
-            }
+            if (!firstMatch) firstMatch = option;
         } else {
             option.style.display = 'none';
         }
     });
 
-    // 3. Seleciona automaticamente o primeiro serviço da plataforma escolhida
-    if (firstVisibleOption) {
-        selectServiceOption(firstVisibleOption);
+    if (firstMatch) {
+        selectServiceOption(firstMatch);
     }
 }
 
@@ -99,14 +93,17 @@ function calculatePrice() {
     document.getElementById('sum-total').innerText = 'R$ ' + total;
 }
 
+// Compatibilidade para cliques nos cards da home
+function selectPlatformAndOrder(platformName) {
+    quickBuy(platformName);
+}
+
 // Botões da tabela de serviços para compra rápida
 function quickBuy(platformName) {
     switchSection('novo-pedido');
-    
-    // Procura a opção da plataforma correspondente e simula o clique
-    const platformOption = document.querySelector(`#platform-dropdown-options .dropdown-option[data-platform="${platformName.toLowerCase()}"]`);
-    if (platformOption) {
-        platformOption.click();
+    const targetOpt = document.querySelector(`#platform-dropdown-options .dropdown-option[data-platform="${platformName.toLowerCase()}"]`);
+    if (targetOpt) {
+        targetOpt.click();
     }
 }
 
@@ -170,7 +167,6 @@ function copyPix() {
 }
 
 window.onload = function() {
-    // Inicializa a página filtrando pelos serviços do Instagram por padrão
     filterServicesByPlatform('instagram');
     calculatePrice();
 };
